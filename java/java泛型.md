@@ -116,7 +116,7 @@ Object obj = p.getFirst();
 ```
 
 ### 无限定通配符
-```
+```java
 void sample(Pair<?> p) {
 
 }
