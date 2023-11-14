@@ -1,5 +1,5 @@
 # code-notes
-零零碎碎的学习笔记
+A small step may lead to a thousand miles
 
 ### Categories
 * [Java](#Java)
