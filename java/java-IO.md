@@ -80,3 +80,20 @@ public static void exec() throws IOException {
 		}
 	}
 ```
+
+### Reader
+有了Reader后，就不再需要将byte[]读出来 使用new String()指定编码的方式进行字符串的转换，而是直接使用：
+```java
+public static void readFile() throws IOException {
+		try (Reader reader = new FileReader("C:\\Users\\jiangt1\\Desktop\\test.txt", StandardCharsets.UTF_8)) {
+			for (;;) {
+				int n = reader.read();
+				if (n == -1) {
+					break;
+				}
+				System.out.println((char) n);
+			}
+		}
+	}
+```
+需要注意的是：`System.out.println((char) 20320);`在内存中使用UTF-8编码，在内存中使用unicode码点表示，因此可以直接使用char 强制转换。
