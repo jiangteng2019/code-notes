@@ -11,6 +11,7 @@ A small step may lead to a thousand miles
 * [数据库](#数据库)
 * [docker](#docker)
 * [markdown](#markdown)
+* [TestStand](#TestStand)
 
 
 
@@ -42,3 +43,7 @@ A small step may lead to a thousand miles
 
 ### markdown
 * [基本语法](markdown/markdown基本语法.md)
+
+### TestStand
+* [自动化测试的需求](teststand/自动化测试的出现.md)
+* [Teststand基本概念](teststand/Teststand基本概念.md)
