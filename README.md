@@ -12,6 +12,8 @@ A small step may lead to a thousand miles
 * [docker](#docker)
 * [markdown](#markdown)
 * [TestStand](#TestStand)
+* [shell](#shell)
+* [数学](#数学)
 
 
 
@@ -48,3 +50,9 @@ A small step may lead to a thousand miles
 ### TestStand
 * [自动化测试的需求](teststand/自动化测试的出现.md)
 * [Teststand基本概念](teststand/Teststand基本概念.md)
+
+### shell
+* [命令提示符支持中文](shell/命令提示符支持中文.md)
+
+### 数学
+* [贝叶斯定理](math/贝叶斯定理.md)
