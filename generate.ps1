@@ -9,6 +9,10 @@ $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $readmeFilePath = Join-Path -Path $scriptPath -ChildPath $readmeFileName
 $null = New-Item -Path $readmeFilePath -ItemType File
 
+# 公共bufne
+$common = "# code-notes`nA small step may lead to a thousand miles`n"
+Add-Content -Path $readmeFilePath -Value $common -Encoding UTF8
+
 # 添加导航部分
 $navigationContent = "### Categories`n"
 Get-ChildItem -Path $scriptPath -Directory | Sort-Object Name | ForEach-Object {
