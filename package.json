@@ -1,0 +1,20 @@
+{
+  "name": "code-notes",
+  "version": "1.0.0",
+  "description": "code notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangteng2019/code-notes.git"
+  },
+  "author": "tengjiang",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jiangteng2019/code-notes/issues"
+  },
+  "homepage": "https://github.com/jiangteng2019/code-notes#readme"
+}

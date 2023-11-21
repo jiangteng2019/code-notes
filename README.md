@@ -6,15 +6,17 @@ A small step may lead to a thousand miles
 * [JavaScript](#javascript)
 * [Node](#node)
 * [C#](#c)
+* [Python](#python)
 * [Vue](#vue)
 * [浏览器](#浏览器)
 * [数据结构与算法](#数据结构与算法)
 * [数据库](#数据库)
 * [docker](#docker)
 * [markdown](#markdown)
-* [TestStand](#TestStand)
+* [TestStand](#teststand)
 * [shell](#shell)
 * [数学](#数学)
+* [Git](#git)
 
 
 
@@ -26,14 +28,15 @@ A small step may lead to a thousand miles
 
 
 
-
-
 ### JavaScript
 
 ### Node
+* [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### C#
 * [比特率与波特率](csharp/比特率与波特率.md)
+
+### Python
 
 ### Vue
 
@@ -59,3 +62,6 @@ A small step may lead to a thousand miles
 
 ### 数学
 * [贝叶斯定理](math/贝叶斯定理.md)
+
+### Git
+* [git重置命令参数](git/git重置命令参数.md)
