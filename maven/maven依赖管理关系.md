@@ -22,18 +22,19 @@ Maven中的依赖关系可以分为以下几种：
 导入依赖是在\<dependencyManagement>中使用的一种特殊的依赖类型。它允许你导入其他项目的POM文件中指定的依赖关系列表。这通常用于继承和使用在一个中央位置定义的依赖版本，以保证多个项目使用相同的依赖版本。
 
 ---
+
 详细解释：  
 1. 编译依赖通常是开发者自己自定义的class。这些class将会出现在编译时和运行时，因为编译时需要class的类型信息，运行时依赖class的内部处理逻辑。所有这就是编译依赖。
 
 2. 运行时依赖，一般使用jdbc的驱动作为例子。通常情况下我们使用DriverManager 获取一个链接，使用getConnection方法。这些全部由jdk官方实现，类定义在java.sql.DriverManager class中。而使用的时候直接调用方法传入数据库的配置文件即可：
 
-```java
-String JDBC_URL = "jdbc:mysql://localhost:3306/test";
-String JDBC_USER = "root";
-String JDBC_PASSWORD = "password";
-// 获取连接:
-Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-```
+    ```java
+    String JDBC_URL = "jdbc:mysql://localhost:3306/test";
+    String JDBC_USER = "root";
+    String JDBC_PASSWORD = "password";
+    // 获取连接:
+    Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+    ```
 从始至终，我们没有使用自己自定义的类，因此编译时根本不需要相关的类。但运行时需要jdbc驱动。这就是运行时依赖。
 
 "运行时依赖"通常是指那些在编译时不直接需要，但在运行时是必须的依赖。而JDBC驱动的情况稍微有些特殊，因为JDBC API是Java的一部分，所以你的代码在编译时期不需要包含具体的JDBC驱动依赖，但在运行时期需要，所以JDBC驱动通常被添加为运行时依赖。
