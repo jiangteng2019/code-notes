@@ -1,6 +1,10 @@
+if (Test-Path "README.md") {
+    Remove-Item -Path "README.md"
+}
+
 # 获取当前日期时间并格式化
 $dateTime = Get-Date -Format "yyyyMMdd_HHmmss"
-$readmeFileName = "README_$dateTime.md"
+$readmeFileName = "README.md"
 
 # 获取当前脚本所在的目录
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition

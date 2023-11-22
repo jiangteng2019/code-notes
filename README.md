@@ -1,4 +1,4 @@
-# code-notes
+﻿# code-notes
 A small step may lead to a thousand miles
 
 ### Categories
@@ -9,6 +9,7 @@ A small step may lead to a thousand miles
 * [Java](#java)
 * [Markdown](#markdown)
 * [Math](#math)
+* [Maven](#maven)
 * [Node](#node)
 * [Shell](#shell)
 * [Teststand](#teststand)
@@ -37,6 +38,9 @@ A small step may lead to a thousand miles
 
 ### Math
 * [贝叶斯定理](math/贝叶斯定理.md)
+
+### Maven
+* [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
 * [npx一键生成服务器](node/npx一键生成服务器.md)
