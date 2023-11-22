@@ -6,6 +6,7 @@ A small step may lead to a thousand miles
 * [Database](#database)
 * [Docker](#docker)
 * [Git](#git)
+* [Http](#http)
 * [Java](#java)
 * [Markdown](#markdown)
 * [Math](#math)
@@ -26,6 +27,9 @@ A small step may lead to a thousand miles
 ### Git
 * [git重置命令参数](git/git重置命令参数.md)
 
+### Http
+* [http协议](http/http协议.md)
+
 ### Java
 * [java-IO](java/java-IO.md)
 * [java泛型](java/java泛型.md)
@@ -40,6 +44,7 @@ A small step may lead to a thousand miles
 * [贝叶斯定理](math/贝叶斯定理.md)
 
 ### Maven
+* [maven多模块管理](maven/maven多模块管理.md)
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
