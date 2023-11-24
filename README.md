@@ -2,6 +2,7 @@
 A small step may lead to a thousand miles
 
 ### Categories
+* [Algorithm](#algorithm)
 * [Csharp](#csharp)
 * [Database](#database)
 * [Docker](#docker)
@@ -14,6 +15,9 @@ A small step may lead to a thousand miles
 * [Node](#node)
 * [Shell](#shell)
 * [Teststand](#teststand)
+
+### Algorithm
+* [CRC校验实现](algorithm/CRC校验实现.md)
 
 ### Csharp
 * [比特率与波特率](csharp/比特率与波特率.md)
@@ -34,6 +38,7 @@ A small step may lead to a thousand miles
 * [java-IO](java/java-IO.md)
 * [java泛型](java/java泛型.md)
 * [java集合类-map](java/java集合类-map.md)
+* [java中的Servlet](java/java中的Servlet.md)
 * [java中的对象类型](java/java中的对象类型.md)
 * [java中的锁](java/java中的锁.md)
 
@@ -42,6 +47,7 @@ A small step may lead to a thousand miles
 
 ### Math
 * [贝叶斯定理](math/贝叶斯定理.md)
+* [多项式](math/多项式.md)
 
 ### Maven
 * [maven多模块管理](maven/maven多模块管理.md)
