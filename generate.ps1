@@ -19,7 +19,7 @@ Add-Content -Path $readmeFilePath -Value $common -Encoding UTF8
 
 # 添加导航部分，排除node_modules
 $navigationContent = "### Categories`n"
-Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist" | Sort-Object Name | ForEach-Object {
+Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist", ".husky" | Sort-Object Name | ForEach-Object {
     $folderName = $_.Name
     $anchorName = $folderName -replace ' ', '' # 移除空格用于锚点
     $displayedName = $folderName.Substring(0,1).ToUpper() + $folderName.Substring(1) # 首字母大写
@@ -28,7 +28,7 @@ Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist" | Sor
 Add-Content -Path $readmeFilePath -Value $navigationContent -Encoding UTF8
 
 # 为每个子文件夹添加详细链接，排除node_modules
-Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist" | Sort-Object Name | ForEach-Object {
+Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist", ".husky" | Sort-Object Name | ForEach-Object {
     $folderName = $_.Name
     $displayedName = $folderName.Substring(0,1).ToUpper() + $folderName.Substring(1) # 首字母大写
     $markdownContent = "### $displayedName`n"

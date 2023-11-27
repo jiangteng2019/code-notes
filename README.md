@@ -2,7 +2,6 @@
 A small step may lead to a thousand miles
 
 ### Categories
-* [.husky](#.husky)
 * [Algorithm](#algorithm)
 * [Csharp](#csharp)
 * [Database](#database)
@@ -18,8 +17,6 @@ A small step may lead to a thousand miles
 * [Shell](#shell)
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
-
-### .husky
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
