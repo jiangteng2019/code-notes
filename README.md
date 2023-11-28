@@ -22,6 +22,7 @@ A small step may lead to a thousand miles
 * [CRC校验实现](algorithm/CRC校验实现.md)
 
 ### Csharp
+* [.net版本区别](csharp/.net版本区别.md)
 * [比特率与波特率](csharp/比特率与波特率.md)
 
 ### Database
