@@ -53,3 +53,12 @@ npm pkg set是npm命令的一部分，用于设置package.json文件中的配置
         scripts.prepare
 
 package.json文件中的一个特殊字段，用于定义在安装包后要运行的脚本。在这种情况下，我们将scripts.prepare设置为husky install。
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1 && git add .",
+    "build": "powershell -ExecutionPolicy Bypass -File build.ps1",
+    "prepare": "husky install"
+  },
+```

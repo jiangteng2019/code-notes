@@ -1,6 +1,15 @@
 ﻿# code-notes
 A small step may lead to a thousand miles
 
+## Generate README.md
+
+        npm run generate
+
+## Using the Husky hook, script will be execute automatically 
+
+        git commit -m 'something'
+
+
 ### Categories
 * [Algorithm](#algorithm)
 * [Csharp](#csharp)

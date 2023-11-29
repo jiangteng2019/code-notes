@@ -13,8 +13,13 @@ $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $readmeFilePath = Join-Path -Path $scriptPath -ChildPath $readmeFileName
 $null = New-Item -Path $readmeFilePath -ItemType File
 
-# 公共bufne
-$common = "# code-notes`nA small step may lead to a thousand miles`n"
+# 公共部分
+$common = "# code-notes`nA small step may lead to a thousand miles`n
+## Generate README.md`n
+        npm run generate`n
+## Using the Husky hook, script will be execute automatically `n
+        git commit -m 'something'`n
+"
 Add-Content -Path $readmeFilePath -Value $common -Encoding UTF8
 
 # 添加导航部分，排除node_modules
