@@ -20,6 +20,7 @@ A small step may lead to a thousand miles
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
+* [布隆过滤器](algorithm/布隆过滤器.md)
 
 ### Csharp
 * [.net版本区别](csharp/.net版本区别.md)
