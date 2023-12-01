@@ -12,11 +12,13 @@ A small step may lead to a thousand miles
 
 ### Categories
 * [Algorithm](#algorithm)
+* [Api](#api)
 * [Csharp](#csharp)
 * [Database](#database)
 * [Docker](#docker)
 * [Engineering](#engineering)
 * [Git](#git)
+* [Github](#github)
 * [Http](#http)
 * [Java](#java)
 * [Markdown](#markdown)
@@ -32,6 +34,9 @@ A small step may lead to a thousand miles
 * [CRC校验实现](algorithm/CRC校验实现.md)
 * [布隆过滤器](algorithm/布隆过滤器.md)
 
+### Api
+* [获取bing首页壁纸api](api/获取bing首页壁纸api.md)
+
 ### Csharp
 * [.net版本区别](csharp/.net版本区别.md)
 * [比特率与波特率](csharp/比特率与波特率.md)
@@ -46,10 +51,13 @@ A small step may lead to a thousand miles
 * [husky配置](engineering/husky配置.md)
 
 ### Git
-* [github Actions](git/github Actions.md)
 * [git错误解决](git/git错误解决.md)
 * [git删除分支](git/git删除分支.md)
 * [git重置命令参数](git/git重置命令参数.md)
+
+### Github
+* [github Actions](github/github Actions.md)
+* [github配置workflow](github/github配置workflow.md)
 
 ### Http
 * [http协议](http/http协议.md)
