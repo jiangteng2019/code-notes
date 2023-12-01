@@ -1,11 +1,11 @@
 ﻿# code-notes
 A small step may lead to a thousand miles
 
-## Generate README.md
+### Generate README.md
 
         npm run generate
 
-## Using the Husky hook, script will be execute automatically 
+### Using the Husky hook, script will be execute automatically 
 
         git commit -m 'something'
 
@@ -46,6 +46,9 @@ A small step may lead to a thousand miles
 * [husky配置](engineering/husky配置.md)
 
 ### Git
+* [github Actions](git/github Actions.md)
+* [git错误解决](git/git错误解决.md)
+* [git删除分支](git/git删除分支.md)
 * [git重置命令参数](git/git重置命令参数.md)
 
 ### Http
@@ -77,9 +80,9 @@ A small step may lead to a thousand miles
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### Shell
-* [命令提示符支持中文](shell/命令提示符支持中文.md)
-* [删除过深文件夹路径](shell/删除过深文件夹路径.md)
-* [自动生成README文件](shell/自动生成README文件.md)
+* [cmd命令删除过深文件夹路径](shell/cmd命令删除过深文件夹路径.md)
+* [cmd命令提示符支持中文](shell/cmd命令提示符支持中文.md)
+* [powershell自动生成README文件](shell/powershell自动生成README文件.md)
 
 ### Spring
 * [AOP编程](spring/AOP编程.md)

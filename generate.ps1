@@ -15,14 +15,14 @@ $null = New-Item -Path $readmeFilePath -ItemType File
 
 # 公共部分
 $common = "# code-notes`nA small step may lead to a thousand miles`n
-## Generate README.md`n
+### Generate README.md`n
         npm run generate`n
-## Using the Husky hook, script will be execute automatically `n
+### Using the Husky hook, script will be execute automatically `n
         git commit -m 'something'`n
 "
 Add-Content -Path $readmeFilePath -Value $common -Encoding UTF8
 
-# 添加导航部分，排除node_modules
+# 添加导航部分，排除node_modules等文件夹
 $navigationContent = "### Categories`n"
 Get-ChildItem -Path $scriptPath -Directory -Exclude "node_modules", "dist", ".husky" | Sort-Object Name | ForEach-Object {
     $folderName = $_.Name
