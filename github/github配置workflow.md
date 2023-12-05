@@ -59,4 +59,4 @@ yml文件的配置如上：
 
 2. 如果仓库的配置没有指定secrets.GITHUB_TOKEN的默认配置，workflow仍然没有推送代码的权限。
 > 需要设置:
-仓库的Setting - Actions - Workflow permissions - Read and write permissions -Save
+仓库的Setting - Actions - General  - Workflow permissions - Read and write permissions -Save
