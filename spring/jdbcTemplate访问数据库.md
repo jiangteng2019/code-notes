@@ -14,9 +14,9 @@ jdbcTemplate 提供了很多SQL查询方法；需要注意的是，为了简化�
 新建一个事务管理器对象
 ```java
 @Bean
-    PlatformTransactionManager createTxManager(@Autowired DataSource dataSource) {
-        return new DataSourceTransactionManager(dataSource);
-    }
+PlatformTransactionManager createTxManager(@Autowired DataSource dataSource) {
+    return new DataSourceTransactionManager(dataSource);
+}
 ```
 
 或者使用声明式的事务实现:

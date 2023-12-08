@@ -21,6 +21,7 @@ A small step may lead to a thousand miles
 * [Github](#github)
 * [Http](#http)
 * [Java](#java)
+* [Kafka](#kafka)
 * [Markdown](#markdown)
 * [Math](#math)
 * [Maven](#maven)
@@ -43,6 +44,7 @@ A small step may lead to a thousand miles
 
 ### Database
 * [MySQL清空表数据](database/MySQL清空表数据.md)
+* [OLAP与OLTP](database/OLAP与OLTP.md)
 
 ### Docker
 * [docker常见命令](docker/docker常见命令.md)
@@ -72,6 +74,9 @@ A small step may lead to a thousand miles
 * [java中的对象类型](java/java中的对象类型.md)
 * [java中的锁](java/java中的锁.md)
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
+
+### Kafka
+* [简单搭建一个kafka服务](kafka/简单搭建一个kafka服务.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
