@@ -1,4 +1,4 @@
-## 简单搭建一个kafka服务
+## 搭建一个kafka服务
 
 既然是简单搭建肯定是使用docker容器:
 
@@ -17,7 +17,7 @@ docker-compose up -d
 
 docker-compse 文件内容：
 
-```
+```yml
 # Copyright VMware, Inc.
 # SPDX-License-Identifier: APACHE-2.0
 

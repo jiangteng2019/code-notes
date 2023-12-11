@@ -76,7 +76,9 @@ A small step may lead to a thousand miles
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
 
 ### Kafka
-* [简单搭建一个kafka服务](kafka/简单搭建一个kafka服务.md)
+* [kafka文件配置](kafka/kafka文件配置.md)
+* [搭建一个kafka服务](kafka/搭建一个kafka服务.md)
+* [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
