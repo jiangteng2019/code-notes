@@ -66,3 +66,35 @@ Kafka 客户端库会自动处理与特定分区和 broker 的连接。
 性能方面，配置多个broker的IP并不会直接提高生产者或消费者的性能，因为Kafka的生产和消费性能主要受到分区数、副本因子、网络带宽、broker性能、生产者和消费者配置等因素的影响。但是，从高可用性的角度来看，配置多个broker的IP会让你的Kafka客户端在面对集群中个别节点故障时更加健壮。
 
 因此，建议在配置生产者和消费者时提供多个broker的IP地址，以确保最佳的可用性和稳定性。这并不是说配置单个broker的IP不能工作，而是在实际生产环境中，为了避免单点故障，推荐配置多个broker的IP。
+
+## 常用的消息交互脚本
+```sh
+#创建topic
+kafka-topics.sh --create --topic t1 --bootstrap-server 172.19.0.3:9092 --partitions 3 --replication-factor 3
+
+#发送消息
+kafka-console-producer.sh --topic t1 --bootstrap-server 172.19.0.3:9092
+
+#消费消息
+kafka-console-consumer.sh --topic t1 --bootstrap-server 172.19.0.3:9092 --from-beginning
+
+#查看topic列表
+kafka-topics.sh --list --bootstrap-server 172.19.0.3:9092
+
+#检查topic
+kafka-topics.sh --describe --topic t1 --bootstrap-server 172.19.0.3:9092
+
+#删除topic
+kafka-topics.sh --bootstrap-server 172.19.0.3:9092 --delete --topic t1,test1
+```
+
+## bootstrap.servers配置
+`bootstrap.servers`是Kafka生产者和消费者配置的一个重要参数。这个参数的值是一个或多个Kafka broker的地址列表，格式为`host1:port1,host2:port2,...`。这个列表的作用是提供一个初始的端点，让生产者和消费者能够连接到Kafka集群。
+
+当生产者或消费者启动并尝试连接到Kafka集群时，它们会使用`bootstrap.servers`列表中的地址来建立连接。一旦连接到集群，客户端就会获取到集群的所有broker信息，包括那些没有在`bootstrap.servers`列表中的broker。这意味着`bootstrap.servers`列表不需要包含集群中的所有broker，只需要包含足够的broker来建立初始连接即可。
+
+这个参数的主要目的是提供一个初始的、可用的连接点，以便客户端能够找到并连接到Kafka集群。一旦连接建立，客户端就会从集群中获取完整的broker列表，以便在后续的操作中进行负载均衡和故障转移。
+
+在实际使用中，为了提高可用性和容错性，通常推荐在`bootstrap.servers`列表中提供多个broker的地址。这样，即使列表中的某个broker不可用，客户端仍然可以连接到其他可用的broker。
+
+需要注意的是，尽管`bootstrap.servers`列表中的broker不需要是集群中的所有broker，但是如果列表中的所有broker都不可用，那么客户端将无法连接到Kafka集群。因此，这个列表应该包含足够多的broker，以确保在某些broker不可用时，客户端仍然可以连接到集群。

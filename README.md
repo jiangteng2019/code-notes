@@ -89,6 +89,8 @@ A small step may lead to a thousand miles
 
 ### Maven
 * [maven多模块管理](maven/maven多模块管理.md)
+* [maven配置阿里云镜像](maven/maven配置阿里云镜像.md)
+* [maven配置局域网仓库地址](maven/maven配置局域网仓库地址.md)
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
