@@ -15,6 +15,7 @@ A small step may lead to a thousand miles
 * [Api](#api)
 * [Csharp](#csharp)
 * [Database](#database)
+* [Devtools](#devtools)
 * [Docker](#docker)
 * [Engineering](#engineering)
 * [Git](#git)
@@ -45,6 +46,9 @@ A small step may lead to a thousand miles
 ### Database
 * [MySQL清空表数据](database/MySQL清空表数据.md)
 * [OLAP与OLTP](database/OLAP与OLTP.md)
+
+### Devtools
+* [idea使用系统maven配置](devtools/idea使用系统maven配置.md)
 
 ### Docker
 * [docker常见命令](docker/docker常见命令.md)
@@ -89,8 +93,8 @@ A small step may lead to a thousand miles
 
 ### Maven
 * [maven多模块管理](maven/maven多模块管理.md)
+* [maven配置Nexus局域网仓库地址](maven/maven配置Nexus局域网仓库地址.md)
 * [maven配置阿里云镜像](maven/maven配置阿里云镜像.md)
-* [maven配置局域网仓库地址](maven/maven配置局域网仓库地址.md)
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
