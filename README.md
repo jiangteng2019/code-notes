@@ -27,6 +27,7 @@ A small step may lead to a thousand miles
 * [Math](#math)
 * [Maven](#maven)
 * [Node](#node)
+* [Other](#other)
 * [Shell](#shell)
 * [Spring](#spring)
 * [Teststand](#teststand)
@@ -62,7 +63,7 @@ A small step may lead to a thousand miles
 * [git重置命令参数](git/git重置命令参数.md)
 
 ### Github
-* [github Actions](github/github Actions.md)
+* [github配置Actions](github/github配置Actions.md)
 * [github配置workflow](github/github配置workflow.md)
 
 ### Http
@@ -99,6 +100,9 @@ A small step may lead to a thousand miles
 
 ### Node
 * [npx一键生成服务器](node/npx一键生成服务器.md)
+
+### Other
+* [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
 ### Shell
 * [cmd命令删除过深文件夹路径](shell/cmd命令删除过深文件夹路径.md)
