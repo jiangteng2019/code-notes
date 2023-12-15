@@ -102,11 +102,15 @@ A small step may lead to a thousand miles
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### Other
+* [Linux服务器启动步骤](other/Linux服务器启动步骤.md)
+* [Linux服务器用户登陆配置读取](other/Linux服务器用户登陆配置读取.md)
+* [Linux中service命令与systemctl命令](other/Linux中service命令与systemctl命令.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
 ### Shell
 * [cmd命令删除过深文件夹路径](shell/cmd命令删除过深文件夹路径.md)
 * [cmd命令提示符支持中文](shell/cmd命令提示符支持中文.md)
+* [powershell运行策略](shell/powershell运行策略.md)
 * [powershell自动生成README文件](shell/powershell自动生成README文件.md)
 
 ### Spring
