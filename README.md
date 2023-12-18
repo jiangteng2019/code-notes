@@ -90,6 +90,8 @@ A small step may lead to a thousand miles
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
+* [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
+* [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
