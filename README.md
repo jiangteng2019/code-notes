@@ -13,6 +13,7 @@ A small step may lead to a thousand miles
 ### Categories
 * [Algorithm](#algorithm)
 * [Api](#api)
+* [Chrome](#chrome)
 * [Csharp](#csharp)
 * [Database](#database)
 * [Devtools](#devtools)
@@ -28,11 +29,13 @@ A small step may lead to a thousand miles
 * [Math](#math)
 * [Maven](#maven)
 * [Node](#node)
+* [Npm](#npm)
 * [Other](#other)
 * [Shell](#shell)
 * [Spring](#spring)
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
+* [Typescript](#typescript)
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
@@ -40,6 +43,9 @@ A small step may lead to a thousand miles
 
 ### Api
 * [获取bing首页壁纸api](api/获取bing首页壁纸api.md)
+
+### Chrome
+* [chrome全屏api使用](chrome/chrome全屏api使用.md)
 
 ### Csharp
 * [.net版本区别](csharp/.net版本区别.md)
@@ -109,6 +115,9 @@ A small step may lead to a thousand miles
 ### Node
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
+### Npm
+* [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
+
 ### Other
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
@@ -128,4 +137,7 @@ A small step may lead to a thousand miles
 
 ### Tomcat
 * [tomcat多线程与servlet之间调用](tomcat/tomcat多线程与servlet之间调用.md)
+
+### Typescript
+* [typescript中的declare关键字](typescript/typescript中的declare关键字.md)
 
