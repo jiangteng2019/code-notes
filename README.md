@@ -36,6 +36,7 @@ A small step may lead to a thousand miles
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
 * [Typescript](#typescript)
+* [Vitest](#vitest)
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
@@ -140,4 +141,8 @@ A small step may lead to a thousand miles
 
 ### Typescript
 * [typescript中的declare关键字](typescript/typescript中的declare关键字.md)
+
+### Vitest
+* [SFC中组合式函数单元测试示例](vitest/SFC中组合式函数单元测试示例.md)
+* [配置Vitest的工作空间](vitest/配置Vitest的工作空间.md)
 
