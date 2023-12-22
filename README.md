@@ -31,7 +31,7 @@ A small step may lead to a thousand miles
 * [Node](#node)
 * [Npm](#npm)
 * [Other](#other)
-* [Shell](#shell)
+* [Powershell](#powershell)
 * [Spring](#spring)
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
@@ -121,11 +121,11 @@ A small step may lead to a thousand miles
 ### Other
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
-### Shell
-* [cmd命令删除过深文件夹路径](shell/cmd命令删除过深文件夹路径.md)
-* [cmd命令提示符支持中文](shell/cmd命令提示符支持中文.md)
-* [powershell运行策略](shell/powershell运行策略.md)
-* [powershell自动生成README文件](shell/powershell自动生成README文件.md)
+### Powershell
+* [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)
+* [cmd命令提示符支持中文](powershell/cmd命令提示符支持中文.md)
+* [powershell运行策略](powershell/powershell运行策略.md)
+* [powershell自动生成README文件](powershell/powershell自动生成README文件.md)
 
 ### Spring
 * [AOP编程](spring/AOP编程.md)
