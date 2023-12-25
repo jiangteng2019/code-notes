@@ -117,6 +117,9 @@ A small step may lead to a thousand miles
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### Npm
+* [npm脚本原理](npm/npm脚本原理.md)
+* [npm脚本执行顺序](npm/npm脚本执行顺序.md)
+* [npm使用run-p运行多个命令](npm/npm使用run-p运行多个命令.md)
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
 
 ### Other
@@ -143,6 +146,7 @@ A small step may lead to a thousand miles
 * [typescript中的declare关键字](typescript/typescript中的declare关键字.md)
 
 ### Vitest
+* [Monorepo介绍](vitest/Monorepo介绍.md)
 * [SFC中组合式函数单元测试示例](vitest/SFC中组合式函数单元测试示例.md)
 * [配置Vitest的工作空间](vitest/配置Vitest的工作空间.md)
 
