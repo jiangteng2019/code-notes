@@ -99,6 +99,7 @@ A small step may lead to a thousand miles
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
+* [Linu硬链接与符号链接](linux/Linu硬链接与符号链接.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
@@ -129,6 +130,8 @@ A small step may lead to a thousand miles
 * [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)
 * [cmd命令提示符支持中文](powershell/cmd命令提示符支持中文.md)
 * [powershell运行策略](powershell/powershell运行策略.md)
+* [powershell中的iex命令](powershell/powershell中的iex命令.md)
+* [powershell中的iwr命令](powershell/powershell中的iwr命令.md)
 * [powershell自动生成README文件](powershell/powershell自动生成README文件.md)
 
 ### Spring
@@ -144,6 +147,7 @@ A small step may lead to a thousand miles
 
 ### Typescript
 * [typescript中的declare关键字](typescript/typescript中的declare关键字.md)
+* [typescript中的类型](typescript/typescript中的类型.md)
 
 ### Vitest
 * [Monorepo介绍](vitest/Monorepo介绍.md)
