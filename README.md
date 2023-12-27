@@ -63,11 +63,14 @@ A small step may lead to a thousand miles
 * [docker常见命令](docker/docker常见命令.md)
 
 ### Engineering
+* [husky规范代码提交](engineering/husky规范代码提交.md)
 * [husky配置](engineering/husky配置.md)
+* [lint-staged代码检测与格式化](engineering/lint-staged代码检测与格式化.md)
 
 ### Git
 * [git错误解决](git/git错误解决.md)
 * [git删除分支](git/git删除分支.md)
+* [git显示文件有更改打开后并无内容修改](git/git显示文件有更改打开后并无内容修改.md)
 * [git重置命令参数](git/git重置命令参数.md)
 
 ### Github
