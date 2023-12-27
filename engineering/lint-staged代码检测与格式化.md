@@ -27,6 +27,7 @@ npx husky add .husky/pre-commit "npm run format:add"
 实际上我们希望的是，如果提交失败了，那就失败了，不要动工作区文件的内容，也就是说：
 
 **当commitlint脚本运行失败的时候 prettier需要对脚本进行回滚**
+
 **当commitlint脚本运行成功的时候 需要对工作区的文件进行提交**
 
 这也是为什么会有一个npm run format:add 命令。显然增加了工程化的复杂程度，现在又lint-staged 这个工具，只对暂存区的文件进行检查与格式化。大大降低的配置复杂性。
@@ -52,4 +53,12 @@ npx husky add .husky/pre-commit "npx lint-staged"
     ]
 }
 ```
-这样提交的时候 会执行husky钩子，进而执行lint-staged 脚本，lint-staged读取对应的配置，对暂存区的文件调用对应的eslint 和 prettier 记性代码检查和格式化。
+提交代码的时候执行步骤如下：
+1. 执行husky钩子，进而执行lint-staged 脚本，
+1. lint-staged读取对应的配置，
+1. 对暂存区的文件调用对应的eslint 和 prettier 记性代码检查和格式化。
+1. 最后执行commitlint校验提交信息
+
+即使最后commitlint校验提交信息失败了，不会有新的文件出现在工作区。因为只检测和格式化了暂存区的文件。
+
+如果直接使用 npm run format 和 npm run lint 那就另当别论了。

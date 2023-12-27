@@ -121,6 +121,7 @@ A small step may lead to a thousand miles
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### Npm
+* [npm对package.json的处理流程](npm/npm对package.json的处理流程.md)
 * [npm脚本原理](npm/npm脚本原理.md)
 * [npm脚本执行顺序](npm/npm脚本执行顺序.md)
 * [npm使用run-p运行多个命令](npm/npm使用run-p运行多个命令.md)
