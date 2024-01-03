@@ -71,6 +71,7 @@ A small step may lead to a thousand miles
 * [git错误解决](git/git错误解决.md)
 * [git删除分支](git/git删除分支.md)
 * [git显示文件有更改打开后并无内容修改](git/git显示文件有更改打开后并无内容修改.md)
+* [git移除已经追踪的文件](git/git移除已经追踪的文件.md)
 * [git重置命令参数](git/git重置命令参数.md)
 
 ### Github
@@ -99,6 +100,8 @@ A small step may lead to a thousand miles
 ### Linux
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
+* [Linux文件权限](linux/Linux文件权限.md)
+* [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
@@ -118,6 +121,7 @@ A small step may lead to a thousand miles
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
+* [npx解析命令参数规则](node/npx解析命令参数规则.md)
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
 ### Npm
@@ -128,6 +132,7 @@ A small step may lead to a thousand miles
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
 
 ### Other
+* [Windows的快捷方式、符号链接、目录联接、硬链接](other/Windows的快捷方式、符号链接、目录联接、硬链接.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
 ### Powershell
