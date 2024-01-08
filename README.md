@@ -23,7 +23,7 @@ A small step may lead to a thousand miles
 * [Github](#github)
 * [Http](#http)
 * [Java](#java)
-* [JavaScript](#JavaScript)
+* [Javascript](#javascript)
 * [Kafka](#kafka)
 * [Linux](#linux)
 * [Markdown](#markdown)
@@ -94,8 +94,8 @@ A small step may lead to a thousand miles
 * [java中的锁](java/java中的锁.md)
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
 
-### JavaScript
-* [JavaScript中的promise对象](JavaScript/JavaScript中的promise对象.md)
+### Javascript
+* [JavaScript中的promise对象](javascript/JavaScript中的promise对象.md)
 
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
