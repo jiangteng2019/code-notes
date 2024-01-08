@@ -38,7 +38,9 @@ A small step may lead to a thousand miles
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
 * [Typescript](#typescript)
+* [Vite](#vite)
 * [Vitest](#vitest)
+* [Windows](#windows)
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
@@ -140,7 +142,6 @@ A small step may lead to a thousand miles
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
 
 ### Other
-* [Windows的快捷方式、符号链接、目录联接、硬链接](other/Windows的快捷方式、符号链接、目录联接、硬链接.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 
 ### Powershell
@@ -170,8 +171,14 @@ A small step may lead to a thousand miles
 * [typescript中的泛型](typescript/typescript中的泛型.md)
 * [typescript中的类型](typescript/typescript中的类型.md)
 
+### Vite
+* [vite如何使用esbuild进行预构建依赖](vite/vite如何使用esbuild进行预构建依赖.md)
+
 ### Vitest
 * [Monorepo介绍](vitest/Monorepo介绍.md)
 * [SFC中组合式函数单元测试示例](vitest/SFC中组合式函数单元测试示例.md)
 * [配置Vitest的工作空间](vitest/配置Vitest的工作空间.md)
+
+### Windows
+* [Windows的快捷方式、符号链接、目录联接、硬链接](windows/Windows的快捷方式、符号链接、目录联接、硬链接.md)
 
