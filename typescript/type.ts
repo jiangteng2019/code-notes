@@ -97,6 +97,7 @@ interface ReadonlyPerson {
 let writablePerson: Person = {
     name: "Person McPersonface",
     age: 42,
+    location: ""
 };
 
 // works

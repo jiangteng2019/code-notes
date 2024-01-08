@@ -23,6 +23,7 @@ A small step may lead to a thousand miles
 * [Github](#github)
 * [Http](#http)
 * [Java](#java)
+* [JavaScript](#JavaScript)
 * [Kafka](#kafka)
 * [Linux](#linux)
 * [Markdown](#markdown)
@@ -33,6 +34,7 @@ A small step may lead to a thousand miles
 * [Other](#other)
 * [Powershell](#powershell)
 * [Spring](#spring)
+* [Tcpip](#tcpip)
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
 * [Typescript](#typescript)
@@ -92,6 +94,9 @@ A small step may lead to a thousand miles
 * [java中的锁](java/java中的锁.md)
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
 
+### JavaScript
+* [JavaScript中的promise对象](JavaScript/JavaScript中的promise对象.md)
+
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
 * [搭建一个kafka服务](kafka/搭建一个kafka服务.md)
@@ -100,12 +105,14 @@ A small step may lead to a thousand miles
 ### Linux
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
+* [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 * [Linu硬链接与符号链接](linux/Linu硬链接与符号链接.md)
+* [yum安装包提示BDB0113错误](linux/yum安装包提示BDB0113错误.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
@@ -121,6 +128,7 @@ A small step may lead to a thousand miles
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Node
+* [es6模块路径解析规则](node/es6模块路径解析规则.md)
 * [npx解析命令参数规则](node/npx解析命令参数规则.md)
 * [npx一键生成服务器](node/npx一键生成服务器.md)
 
@@ -147,6 +155,9 @@ A small step may lead to a thousand miles
 * [AOP编程](spring/AOP编程.md)
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
 
+### Tcpip
+* [ARP地址解析协议](tcpip/ARP地址解析协议.md)
+
 ### Teststand
 * [Teststand基本概念](teststand/Teststand基本概念.md)
 * [自动化测试的出现](teststand/自动化测试的出现.md)
@@ -156,6 +167,7 @@ A small step may lead to a thousand miles
 
 ### Typescript
 * [typescript中的declare关键字](typescript/typescript中的declare关键字.md)
+* [typescript中的泛型](typescript/typescript中的泛型.md)
 * [typescript中的类型](typescript/typescript中的类型.md)
 
 ### Vitest
