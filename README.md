@@ -65,6 +65,7 @@ A small step may lead to a thousand miles
 
 ### Docker
 * [docker常见命令](docker/docker常见命令.md)
+* [docker中-p参数](docker/docker中-p参数.md)
 
 ### Engineering
 * [husky规范代码提交](engineering/husky规范代码提交.md)
@@ -95,6 +96,7 @@ A small step may lead to a thousand miles
 * [java中的对象类型](java/java中的对象类型.md)
 * [java中的锁](java/java中的锁.md)
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
+* [运行在jvm上的语言](java/运行在jvm上的语言.md)
 
 ### Javascript
 * [JavaScript中的promise对象](javascript/JavaScript中的promise对象.md)
@@ -105,6 +107,7 @@ A small step may lead to a thousand miles
 * [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Linux
+* [linux安装的初始化网络配置](linux/linux安装的初始化网络配置.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
@@ -115,6 +118,7 @@ A small step may lead to a thousand miles
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 * [Linu硬链接与符号链接](linux/Linu硬链接与符号链接.md)
 * [yum安装包提示BDB0113错误](linux/yum安装包提示BDB0113错误.md)
+* [yum源配置与解释](linux/yum源配置与解释.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
@@ -142,7 +146,9 @@ A small step may lead to a thousand miles
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
 
 ### Other
+* [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
+* [恒星年与回归年](other/恒星年与回归年.md)
 
 ### Powershell
 * [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)
@@ -158,6 +164,7 @@ A small step may lead to a thousand miles
 
 ### Tcpip
 * [ARP地址解析协议](tcpip/ARP地址解析协议.md)
+* [NTP网络时间协议](tcpip/NTP网络时间协议.md)
 
 ### Teststand
 * [Teststand基本概念](teststand/Teststand基本概念.md)
