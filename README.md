@@ -29,6 +29,7 @@ A small step may lead to a thousand miles
 * [Markdown](#markdown)
 * [Math](#math)
 * [Maven](#maven)
+* [Nacos](#nacos)
 * [Node](#node)
 * [Npm](#npm)
 * [Other](#other)
@@ -85,6 +86,7 @@ A small step may lead to a thousand miles
 
 ### Http
 * [http协议](http/http协议.md)
+* [http协议BASIC认证模式](http/http协议BASIC认证模式.md)
 
 ### Java
 * [java-IO](java/java-IO.md)
@@ -108,15 +110,16 @@ A small step may lead to a thousand miles
 
 ### Linux
 * [linux安装的初始化网络配置](linux/linux安装的初始化网络配置.md)
+* [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
+* [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
-* [Linu硬链接与符号链接](linux/Linu硬链接与符号链接.md)
 * [yum安装包提示BDB0113错误](linux/yum安装包提示BDB0113错误.md)
 * [yum源配置与解释](linux/yum源配置与解释.md)
 
@@ -132,6 +135,9 @@ A small step may lead to a thousand miles
 * [maven配置Nexus局域网仓库地址](maven/maven配置Nexus局域网仓库地址.md)
 * [maven配置阿里云镜像](maven/maven配置阿里云镜像.md)
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
+
+### Nacos
+* [nacos基本概念](nacos/nacos基本概念.md)
 
 ### Node
 * [es6模块路径解析规则](node/es6模块路径解析规则.md)
@@ -161,6 +167,7 @@ A small step may lead to a thousand miles
 ### Spring
 * [AOP编程](spring/AOP编程.md)
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
+* [spring的@Autowired与@Resource注解区别](spring/spring的@Autowired与@Resource注解区别.md)
 
 ### Tcpip
 * [ARP地址解析协议](tcpip/ARP地址解析协议.md)
