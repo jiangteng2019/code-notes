@@ -24,6 +24,7 @@ A small step may lead to a thousand miles
 * [Http](#http)
 * [Java](#java)
 * [Javascript](#javascript)
+* [K8s](#k8s)
 * [Kafka](#kafka)
 * [Linux](#linux)
 * [Markdown](#markdown)
@@ -63,6 +64,7 @@ A small step may lead to a thousand miles
 
 ### Devtools
 * [idea使用系统maven配置](devtools/idea使用系统maven配置.md)
+* [什么是devops](devtools/什么是devops.md)
 
 ### Docker
 * [docker常见命令](docker/docker常见命令.md)
@@ -103,6 +105,9 @@ A small step may lead to a thousand miles
 ### Javascript
 * [JavaScript中的promise对象](javascript/JavaScript中的promise对象.md)
 
+### K8s
+* [k8s集群搭建](k8s/k8s集群搭建.md)
+
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
 * [搭建一个kafka服务](kafka/搭建一个kafka服务.md)
@@ -120,6 +125,7 @@ A small step may lead to a thousand miles
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
+* [ssh端口转发](linux/ssh端口转发.md)
 * [yum安装包提示BDB0113错误](linux/yum安装包提示BDB0113错误.md)
 * [yum源配置与解释](linux/yum源配置与解释.md)
 
@@ -137,6 +143,7 @@ A small step may lead to a thousand miles
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Nacos
+* [docker-Desktop 启动nacos](nacos/docker-Desktop 启动nacos.md)
 * [nacos基本概念](nacos/nacos基本概念.md)
 
 ### Node
@@ -194,5 +201,6 @@ A small step may lead to a thousand miles
 * [配置Vitest的工作空间](vitest/配置Vitest的工作空间.md)
 
 ### Windows
+* [windows查看端口占用](windows/windows查看端口占用.md)
 * [Windows的快捷方式、符号链接、目录联接、硬链接](windows/Windows的快捷方式、符号链接、目录联接、硬链接.md)
 
