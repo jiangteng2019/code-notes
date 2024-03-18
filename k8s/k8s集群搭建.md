@@ -281,6 +281,57 @@ k8s-node1    Ready    <none>          17h   v1.28.2
 k8s-node2    Ready    <none>          16h   v1.28.2
 ```
 
+## 4、重置k8s集群
+当虚拟接的网络发生变更之后，发现整个集群都不可用了。因为k8s集群高度依赖网络进行通信。学习环境可以重置集群,使用 kubeadm 工具重置集群的基本步骤：
+
+### 在控制面（Master）节点和工作节点（Worker Nodes）上执行：
+
+1. **停止 kubelet 服务**：
+   ```sh
+   sudo systemctl stop kubelet
+   ```
+
+2. **使用 kubeadm 重置**：
+   ```sh
+   sudo kubeadm reset
+   ```
+   这个命令会清除 kubelet 的配置，移除 Kubernetes 的相关容器，以及执行一些清理操作。
+
+3. **清理 iptables**：
+   清理可能残留的 iptables 规则，这些规则可能会干扰集群的重新初始化。
+   ```sh
+   sudo iptables -F
+   sudo iptables -X
+   sudo iptables -t nat -F
+   sudo iptables -t nat -X
+   sudo iptables -t mangle -F
+   sudo iptables -t mangle -X
+   sudo iptables -P FORWARD ACCEPT
+   ```
+
+### 重新初始化集群：
+
+在控制面节点上，您可以使用 kubeadm init 命令来重新初始化集群。在执行此命令时，可以指定新的 IP 地址作为 API server 的地址。
+
+新 IP 地址是 `192.168.147.137`，执行命令：
+```sh
+kubeadm init --image-repository registry.aliyuncs.com/google_containers --apiserver-advertise-address 192.168.147.137 --pod-network-cidr=10.122.0.0/16 --token-ttl 0
+```
+完成初始化后，按照提示操作，配置 kubectl 工具的使用环境。
+
+### 将节点加入集群：
+
+
+使用命令：
+```sh
+kubeadm join 192.168.147.137:6443 --token 0c4gsd.ack5w3mvuyuauivl  --discovery-token-ca-cert-hash sha256:0ebb75771d6616cca43750771263760f28f31044da103de93ac6a010fc5afff9
+```
+
+
+
+
+
+
 ------------
 
 ## kubeadm init：

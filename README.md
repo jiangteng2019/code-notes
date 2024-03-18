@@ -67,6 +67,7 @@ A small step may lead to a thousand miles
 * [什么是devops](devtools/什么是devops.md)
 
 ### Docker
+* [docker-desktop安装svn-server](docker/docker-desktop安装svn-server.md)
 * [docker常见命令](docker/docker常见命令.md)
 * [docker中-p参数](docker/docker中-p参数.md)
 
@@ -119,6 +120,7 @@ A small step may lead to a thousand miles
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
+* [linux设置防火墙允许通过http协议](linux/linux设置防火墙允许通过http协议.md)
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
