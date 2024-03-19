@@ -309,7 +309,7 @@ k8s-node2    Ready    <none>          16h   v1.28.2
    sudo iptables -P FORWARD ACCEPT
    ```
 
-### 重新初始化集群：
+### （控制节点）重新初始化集群：
 
 在控制面节点上，您可以使用 kubeadm init 命令来重新初始化集群。在执行此命令时，可以指定新的 IP 地址作为 API server 的地址。
 
@@ -319,7 +319,14 @@ kubeadm init --image-repository registry.aliyuncs.com/google_containers --apiser
 ```
 完成初始化后，按照提示操作，配置 kubectl 工具的使用环境。
 
-### 将节点加入集群：
+### （控制节点）网络重新初始化
+```
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/tigera-operator.yaml
+
+kubectl create -f custom-resources.yaml
+```
+
+### 将工作节点加入集群：
 
 
 使用命令：
@@ -331,7 +338,8 @@ kubeadm join 192.168.147.137:6443 --token 0c4gsd.ack5w3mvuyuauivl  --discovery-t
 
 
 
-
+------------
+# 名词解释
 ------------
 
 ## kubeadm init：

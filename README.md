@@ -115,12 +115,14 @@ A small step may lead to a thousand miles
 * [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Linux
+* [linux 系统中的 cgroup](linux/linux 系统中的 cgroup.md)
 * [linux安装的初始化网络配置](linux/linux安装的初始化网络配置.md)
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
 * [linux设置防火墙允许通过http协议](linux/linux设置防火墙允许通过http协议.md)
+* [Linux设置静态ip](linux/Linux设置静态ip.md)
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
