@@ -1,4 +1,4 @@
-## docker-Desktop 启动nacos
+## dockerDesktop启动nacos
 
 在使用docker-Desktop工具启动nacos服务时，需要配置环境变量MODE
 
