@@ -150,7 +150,7 @@ A small step may lead to a thousand miles
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Mysql
-* [mysql数据路实现主从复制](mysql/mysql数据路实现主从复制.md)
+* [mysql数据库实现主从复制](mysql/mysql数据库实现主从复制.md)
 
 ### Nacos
 * [docker-Desktop 启动nacos](nacos/docker-Desktop 启动nacos.md)
