@@ -91,6 +91,7 @@ A small step may lead to a thousand miles
 * [github配置workflow](github/github配置workflow.md)
 
 ### Http
+* [https中的安全认证](http/https中的安全认证.md)
 * [http协议](http/http协议.md)
 * [http协议BASIC认证模式](http/http协议BASIC认证模式.md)
 
@@ -111,6 +112,8 @@ A small step may lead to a thousand miles
 
 ### K8s
 * [k8s集群搭建](k8s/k8s集群搭建.md)
+* [k8s命令集合](k8s/k8s命令集合.md)
+* [k8s外部访问pod中的服务](k8s/k8s外部访问pod中的服务.md)
 
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
@@ -118,7 +121,6 @@ A small step may lead to a thousand miles
 * [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Linux
-* [linux 系统中的 cgroup](linux/linux 系统中的 cgroup.md)
 * [linux安装的初始化网络配置](linux/linux安装的初始化网络配置.md)
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
@@ -130,6 +132,7 @@ A small step may lead to a thousand miles
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
+* [linux中的cgroup](linux/linux中的cgroup.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 * [ssh端口转发](linux/ssh端口转发.md)
