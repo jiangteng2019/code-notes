@@ -111,9 +111,11 @@ A small step may lead to a thousand miles
 * [JavaScript中的promise对象](javascript/JavaScript中的promise对象.md)
 
 ### K8s
+* [k8s更改标签的影响](k8s/k8s更改标签的影响.md)
 * [k8s集群搭建](k8s/k8s集群搭建.md)
 * [k8s命令集合](k8s/k8s命令集合.md)
 * [k8s外部访问pod中的服务](k8s/k8s外部访问pod中的服务.md)
+* [k8s中的ingress](k8s/k8s中的ingress.md)
 
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
@@ -133,6 +135,7 @@ A small step may lead to a thousand miles
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [linux中的cgroup](linux/linux中的cgroup.md)
+* [Linux中的数据卷](linux/Linux中的数据卷.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 * [ssh端口转发](linux/ssh端口转发.md)
@@ -175,6 +178,8 @@ A small step may lead to a thousand miles
 * [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 * [恒星年与回归年](other/恒星年与回归年.md)
+* [裸机虚拟化技术](other/裸机虚拟化技术.md)
+* [虚拟机管理程序](other/虚拟机管理程序.md)
 
 ### Powershell
 * [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)

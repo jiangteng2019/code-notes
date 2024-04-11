@@ -1,0 +1,18 @@
+
+## k8s更改标签的影响
+
+在Kubernetes（k8s）中，Deployment是一种管理Pod和ReplicaSet的方式，以确保指定数量的Pod副本始终在运行。Deployment使用标签选择器（Label Selector）来确定哪些Pod应该由ReplicaSet管理。
+
+标签选择器是一种键值对机制，用于确定哪些Pod应当归属于某个Deployment。当你创建或更新一个Deployment时，可以通过在Deployment配置中指定标签选择器来选择哪些Pod将被该Deployment管理。
+
+在这段说明中，主要讨论了标签选择器在Deployment中的重要性和其更新时需要注意的事项：
+
+1. **标签选择算符的不变性**：在API版本`apps/v1`中，一旦创建了Deployment，其标签选择器就是不可更改的。这意味着在Deployment创建后，你不能修改它的标签选择器来匹配不同的Pod。这样设计的目的是为了维护Deployment和Pod之间的清晰关系，避免由于选择器更改而引起的混乱。
+
+2. **添加标签选择器的影响**：如果你需要添加新的标签选择器，必须使用新标签更新Deployment规约中的Pod模板标签。这样做的后果是，新的选择器将不会选择使用旧选择器创建的ReplicaSet和Pod，导致创建新的ReplicaSet时，所有使用旧选择器创建的ReplicaSet将被孤立。孤立的ReplicaSet意味着它们不再被新的Deployment管理，这可能导致资源泄漏或不一致的部署状态。
+
+3. **更新选择算符的影响**：如果更新选择算符（比如更改了某个算符的键名），将会触发和添加选择算符相同的行为，即创建新的ReplicaSet并可能导致旧的ReplicaSet被孤立。
+
+4. **删除选择算符的影响**：删除选择算符操作会从Deployment的选择算符中移除现有算符，但这不需要更改Pod模板标签。现有的ReplicaSet不会被孤立，也不会创建新的ReplicaSet。然而，已删除的标签仍然存在于现有的Pod和ReplicaSet中，这意味着这些资源的归属关系不会受到影响。
+
+总之，这段说明强调了在Kubernetes中处理Deployment的标签选择器时应该格外小心。由于标签选择器是决定Pod归属关系的关键机制，任何更改都可能导致复杂的后果，包括资源孤立和部署不一致。因此，最好是在Deployment创建之初就仔细规划好标签选择器，以避免未来需要进行更改。
