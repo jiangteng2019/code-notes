@@ -34,6 +34,7 @@ A small step may lead to a thousand miles
 * [Nacos](#nacos)
 * [Node](#node)
 * [Npm](#npm)
+* [Orm](#orm)
 * [Other](#other)
 * [Powershell](#powershell)
 * [Spring](#spring)
@@ -70,6 +71,7 @@ A small step may lead to a thousand miles
 ### Docker
 * [docker-desktop安装svn-server](docker/docker-desktop安装svn-server.md)
 * [docker常见命令](docker/docker常见命令.md)
+* [docker镜像复制与加载](docker/docker镜像复制与加载.md)
 * [docker容器数据卷](docker/docker容器数据卷.md)
 * [docker中-p参数](docker/docker中-p参数.md)
 * [docker中的网络连接](docker/docker中的网络连接.md)
@@ -94,6 +96,7 @@ A small step may lead to a thousand miles
 * [https中的安全认证](http/https中的安全认证.md)
 * [http协议](http/http协议.md)
 * [http协议BASIC认证模式](http/http协议BASIC认证模式.md)
+* [http协议中的Content-Type与Content-Disposition](http/http协议中的Content-Type与Content-Disposition.md)
 
 ### Java
 * [java-IO](java/java-IO.md)
@@ -116,6 +119,7 @@ A small step may lead to a thousand miles
 * [k8s命令集合](k8s/k8s命令集合.md)
 * [k8s外部访问pod中的服务](k8s/k8s外部访问pod中的服务.md)
 * [k8s中的ingress](k8s/k8s中的ingress.md)
+* [k8s中的网络插件](k8s/k8s中的网络插件.md)
 
 ### Kafka
 * [kafka文件配置](kafka/kafka文件配置.md)
@@ -127,6 +131,7 @@ A small step may lead to a thousand miles
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
+* [linux配置squid代理](linux/linux配置squid代理.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
 * [linux设置防火墙允许通过http协议](linux/linux设置防火墙允许通过http协议.md)
 * [Linux设置静态ip](linux/Linux设置静态ip.md)
@@ -173,6 +178,9 @@ A small step may lead to a thousand miles
 * [npm脚本执行顺序](npm/npm脚本执行顺序.md)
 * [npm使用run-p运行多个命令](npm/npm使用run-p运行多个命令.md)
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
+
+### Orm
+* [mybatis通过注解生成条件查询sql](orm/mybatis通过注解生成条件查询sql.md)
 
 ### Other
 * [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
