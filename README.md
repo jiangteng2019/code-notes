@@ -127,19 +127,19 @@ A small step may lead to a thousand miles
 * [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Linux
-* [linux安装的初始化网络配置](linux/linux安装的初始化网络配置.md)
+* [Linux安装的初始化网络配置](linux/Linux安装的初始化网络配置.md)
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [linux配置squid代理](linux/linux配置squid代理.md)
 * [Linux扫描局域网客户端](linux/Linux扫描局域网客户端.md)
-* [linux设置防火墙允许通过http协议](linux/linux设置防火墙允许通过http协议.md)
+* [Linux设置防火墙允许通过http协议](linux/Linux设置防火墙允许通过http协议.md)
 * [Linux设置静态ip](linux/Linux设置静态ip.md)
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
-* [linux中的cgroup](linux/linux中的cgroup.md)
+* [Linux中的cgroup](linux/Linux中的cgroup.md)
 * [Linux中的数据卷](linux/Linux中的数据卷.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
@@ -200,6 +200,7 @@ A small step may lead to a thousand miles
 ### Spring
 * [AOP编程](spring/AOP编程.md)
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
+* [springCloud微服务治理框架](spring/springCloud微服务治理框架.md)
 * [spring的@Autowired与@Resource注解区别](spring/spring的@Autowired与@Resource注解区别.md)
 
 ### Tcpip
@@ -227,6 +228,7 @@ A small step may lead to a thousand miles
 * [配置Vitest的工作空间](vitest/配置Vitest的工作空间.md)
 
 ### Windows
+* [windows编译c文件的步骤](windows/windows编译c文件的步骤.md)
 * [windows查看端口占用](windows/windows查看端口占用.md)
 * [Windows的快捷方式、符号链接、目录联接、硬链接](windows/Windows的快捷方式、符号链接、目录联接、硬链接.md)
 
