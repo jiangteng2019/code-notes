@@ -70,6 +70,7 @@ A small step may lead to a thousand miles
 
 ### Docker
 * [docker-desktop安装svn-server](docker/docker-desktop安装svn-server.md)
+* [docker安装mysql](docker/docker安装mysql.md)
 * [docker常见命令](docker/docker常见命令.md)
 * [docker镜像复制与加载](docker/docker镜像复制与加载.md)
 * [docker容器数据卷](docker/docker容器数据卷.md)
@@ -184,10 +185,12 @@ A small step may lead to a thousand miles
 
 ### Other
 * [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
+* [常见天文参考系与名词解释](other/常见天文参考系与名词解释.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 * [恒星年与回归年](other/恒星年与回归年.md)
 * [裸机虚拟化技术](other/裸机虚拟化技术.md)
 * [虚拟机管理程序](other/虚拟机管理程序.md)
+* [由J2000坐标系引出的问题](other/由J2000坐标系引出的问题.md)
 
 ### Powershell
 * [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)
