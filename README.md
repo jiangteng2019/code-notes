@@ -38,6 +38,7 @@ A small step may lead to a thousand miles
 * [Other](#other)
 * [Powershell](#powershell)
 * [Spring](#spring)
+* [Ssh](#ssh)
 * [Tcpip](#tcpip)
 * [Teststand](#teststand)
 * [Tomcat](#tomcat)
@@ -128,6 +129,7 @@ A small step may lead to a thousand miles
 * [搭建一个kafka集群](kafka/搭建一个kafka集群.md)
 
 ### Linux
+* [Linux安装jdk17](linux/Linux安装jdk17.md)
 * [Linux安装的初始化网络配置](linux/Linux安装的初始化网络配置.md)
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
@@ -205,6 +207,8 @@ A small step may lead to a thousand miles
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
 * [springCloud微服务治理框架](spring/springCloud微服务治理框架.md)
 * [spring的@Autowired与@Resource注解区别](spring/spring的@Autowired与@Resource注解区别.md)
+
+### Ssh
 
 ### Tcpip
 * [ARP地址解析协议](tcpip/ARP地址解析协议.md)
