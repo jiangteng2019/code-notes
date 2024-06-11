@@ -21,6 +21,7 @@ A small step may lead to a thousand miles
 * [Engineering](#engineering)
 * [Git](#git)
 * [Github](#github)
+* [Helm](#helm)
 * [Http](#http)
 * [Java](#java)
 * [Javascript](#javascript)
@@ -94,6 +95,9 @@ A small step may lead to a thousand miles
 * [github配置Actions](github/github配置Actions.md)
 * [github配置workflow](github/github配置workflow.md)
 
+### Helm
+* [helm常见命令操作](helm/helm常见命令操作.md)
+
 ### Http
 * [https中的安全认证](http/https中的安全认证.md)
 * [http协议](http/http协议.md)
@@ -119,6 +123,7 @@ A small step may lead to a thousand miles
 * [k8s更改标签的影响](k8s/k8s更改标签的影响.md)
 * [k8s集群搭建](k8s/k8s集群搭建.md)
 * [k8s命令集合](k8s/k8s命令集合.md)
+* [k8s如何安装包管理工具helm](k8s/k8s如何安装包管理工具helm.md)
 * [k8s外部访问pod中的服务](k8s/k8s外部访问pod中的服务.md)
 * [k8s中的ingress](k8s/k8s中的ingress.md)
 * [k8s中的网络插件](k8s/k8s中的网络插件.md)
@@ -141,6 +146,7 @@ A small step may lead to a thousand miles
 * [Linux文件权限](linux/Linux文件权限.md)
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
+* [Linux与宿主机共享文件夹](linux/Linux与宿主机共享文件夹.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中的cgroup](linux/Linux中的cgroup.md)
 * [Linux中的数据卷](linux/Linux中的数据卷.md)
