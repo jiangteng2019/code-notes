@@ -72,6 +72,7 @@ A small step may lead to a thousand miles
 * [什么是devops](devtools/什么是devops.md)
 
 ### Docker
+* [centos安装docker-compose](docker/centos安装docker-compose.md)
 * [docker-desktop安装svn-server](docker/docker-desktop安装svn-server.md)
 * [docker安装mysql](docker/docker安装mysql.md)
 * [docker常见命令](docker/docker常见命令.md)
@@ -100,6 +101,7 @@ A small step may lead to a thousand miles
 
 ### Harbor
 * [CentOS离线安装harbor](harbor/CentOS离线安装harbor.md)
+* [harbor启用https](harbor/harbor启用https.md)
 
 ### Helm
 * [helm常见命令操作](helm/helm常见命令操作.md)

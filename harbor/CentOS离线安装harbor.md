@@ -33,7 +33,7 @@ hostname: 10.139.203.31
 # 执行安装
 ./install.sh
 
-# 默认的登陆账户与密码
+# 默认的登录账户与密码
 Username: admin
 Password: Harbor12345
 
