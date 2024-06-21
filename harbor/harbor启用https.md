@@ -115,5 +115,25 @@ docker-compose down -v
 docker-compose up -d
 ```
 
+### 客户端配置
+客户端ip为 10.139.203.35
+
+harbor服务为 10.139.203.31
+
+在客户端上创建目录：
+```sh
+# 表示认可31服务器的证书
+mkdir -p /etc/docker/certs.d/10.139.203.31
+```
+
+拷贝证书到客户端：
+```sh
+# 在harbor的服务器上执行，将证书复制到客户端机器
+scp /root/cert/server.key root@10.139.203.35:/etc/docker/certs.d/10.139.203.31
+scp /root/cert/server.cert root@10.139.203.35:/etc/docker/certs.d/10.139.203.31
+scp /root/cert/ca.crt root@10.139.203.35:/etc/docker/certs.d/10.139.203.31
+
+```
+
 参考链接：
 https://cloud.tencent.com/developer/article/1865259
