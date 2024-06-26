@@ -119,6 +119,7 @@ A small step may lead to a thousand miles
 * [java泛型](java/java泛型.md)
 * [java集合类-map](java/java集合类-map.md)
 * [java类加载器](java/java类加载器.md)
+* [java中Entity转VO方法](java/java中Entity转VO方法.md)
 * [java中的Servlet](java/java中的Servlet.md)
 * [java中的对象类型](java/java中的对象类型.md)
 * [java中的锁](java/java中的锁.md)
@@ -221,6 +222,8 @@ A small step may lead to a thousand miles
 ### Spring
 * [AOP编程](spring/AOP编程.md)
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
+* [mybatis分页插件pagehelper实现原理](spring/mybatis分页插件pagehelper实现原理.md)
+* [springboot中controller接收前端参数方法](spring/springboot中controller接收前端参数方法.md)
 * [springCloud微服务治理框架](spring/springCloud微服务治理框架.md)
 * [spring的@Autowired与@Resource注解区别](spring/spring的@Autowired与@Resource注解区别.md)
 
