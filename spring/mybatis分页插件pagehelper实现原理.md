@@ -1,5 +1,8 @@
 ## mybatis分页插件PageHelper实现原理
 
+### PageHelper.startPage方法重要提示
+### 只有紧跟在PageHelper.startPage方法后的第一个Mybatis的查询（Select）方法会被分页。
+
 PageHelper是一个MyBatis的插件，用于简化MyBatis中的分页查询操作。它的实现原理大致如下：
 
 初始化分页参数：当你调用PageHelper.startPage(pageNum, pageSize)时，PageHelper会根据传入的pageNum（当前页码）和pageSize（每页记录数）初始化一个Page对象，并将其放入线程本地变量（ThreadLocal）中。这意味着分页参数是按线程隔离的，不会影响到其他线程的查询。
