@@ -205,12 +205,16 @@ A small step may lead to a thousand miles
 
 ### Other
 * [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
+* [EME2000坐标系GCRS坐标系与J2000坐标系](other/EME2000坐标系GCRS坐标系与J2000坐标系.md)
 * [常见天文参考系与名词解释](other/常见天文参考系与名词解释.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 * [轨道平根与瞬根](other/轨道平根与瞬根.md)
 * [恒星年与回归年](other/恒星年与回归年.md)
+* [回归年与恒星年](other/回归年与恒星年.md)
 * [解析传播与数值传播](other/解析传播与数值传播.md)
 * [裸机虚拟化技术](other/裸机虚拟化技术.md)
+* [儒略历与格里历](other/儒略历与格里历.md)
+* [什么是无奇点根数](other/什么是无奇点根数.md)
 * [卫星轨道外推](other/卫星轨道外推.md)
 * [虚拟机管理程序](other/虚拟机管理程序.md)
 * [由J2000坐标系引出的问题](other/由J2000坐标系引出的问题.md)
