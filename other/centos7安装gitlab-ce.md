@@ -1,6 +1,7 @@
-## centos7安装gitlab-ce
+# centos7安装gitlab-ce
 
 1. 离线安装
+
     ``` bash
     # 下载gitlab-ce镜像:
     # https://packages.gitlab.com/gitlab/gitlab-ce
@@ -13,6 +14,7 @@
 1. 在线安装
 
     在 /etc/yum.repos.d/ 下新建 gitlab-ce.repo，写入如下内容
+
     ```sh
     [gitlab-ce]
     name=gitlab-ce
@@ -24,6 +26,7 @@
     ```
 
     然后创建cache，再直接安装gitlab-ce
+
     ```sh
     yum makecache  # 这一步会创建大量的数据
 
@@ -40,6 +43,7 @@
 1. gitlab的配置
 
     配置文件位置  /etc/gitlab/gitlab.rb
+
     ```sh
     [root@centos7 test]# vim /etc/gitlab/gitlab.rb
 
@@ -60,7 +64,9 @@
     gitlab_rails['gitlab_email_from'] = "xiaohao@qq.com"  # 指定发送邮件的邮箱地址
     user["git_user_email"] = "123456@qq.com"   # 指定接收邮件的邮箱地址
     ```
+
 1. gitlabctl 常用命令
+
     ```sh
     gitlab-ctl start         # 启动所有 gitlab 组件
     gitlab-ctl stop          # 停止所有 gitlab 组件

@@ -209,7 +209,6 @@ A small step may lead to a thousand miles
 * [常见天文参考系与名词解释](other/常见天文参考系与名词解释.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 * [轨道平根与瞬根](other/轨道平根与瞬根.md)
-* [恒星年与回归年](other/恒星年与回归年.md)
 * [回归年与恒星年](other/回归年与恒星年.md)
 * [解析传播与数值传播](other/解析传播与数值传播.md)
 * [裸机虚拟化技术](other/裸机虚拟化技术.md)
