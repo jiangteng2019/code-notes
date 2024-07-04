@@ -1,7 +1,9 @@
 ## docker中的网络连接
 
 ### 默认网络
+
 docker创建的时候会默认创建三种网络，可以通过 docker network ls 查看
+
 ```sh
 [root@k8s-master ~]# docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
@@ -16,21 +18,22 @@ NETWORK ID     NAME      DRIVER    SCOPE
 
 具体来说,创建容器网络连接的过程是这样的:
 
-1) Docker daemon启动时,会创建docker0虚拟网桥(bridge)。
+1. Docker daemon启动时,会创建docker0虚拟网桥(bridge)。
 
-2) 当启动一个新容器时,Docker会先创建一对虚拟网卡(veth pair),分别是容器内部的eth0虚拟网卡和宿主机上的另一个虚拟网卡(如veth1234)。
+2. 当启动一个新容器时,Docker会先创建一对虚拟网卡(veth pair),分别是容器内部的eth0虚拟网卡和宿主机上的另一个虚拟网卡(如veth1234)。
 
-3) 然后Docker会将宿主机上的那个虚拟网卡(veth1234)连接到docker0网桥上。
+3. 然后Docker会将宿主机上的那个虚拟网卡(veth1234)连接到docker0网桥上。
 
-4) 这样新容器的eth0虚拟网卡就通过veth pair与docker0网桥相连了。
+4. 这样新容器的eth0虚拟网卡就通过veth pair与docker0网桥相连了。
 
-5) 所有容器都这样连接到同一个docker0网桥上,因此就能够互相通信。
+5. 所有容器都这样连接到同一个docker0网桥上,因此就能够互相通信。
 
 之所以要创建这对虚拟网卡接口,是因为容器需要一个专属的网卡连到虚拟网桥上,这样既能与外界通信,又能与其他容器通信。如果直接将容器加到网桥上,容器就没有了专属网卡,网络性能和隔离性会受到影响。
 
 所以虽然有docker0网桥,但为了给每个容器分配独立的网卡,Docker还是在创建容器时临时创建了一对虚拟网卡接口,作为连接到docker0网桥的通路。这种设计可以确保网络性能和隔离性。
 
 查看容器的网卡：
+
 ```sh
 / # ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1000
@@ -42,7 +45,9 @@ NETWORK ID     NAME      DRIVER    SCOPE
     inet 172.17.0.3/16 brd 172.17.255.255 scope global eth0
        valid_lft forever preferred_lft forever
 ```
+
 查看宿主机的网卡：
+
 ```sh
 # ip addr
 18: vethdcfdc20@if17: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
@@ -54,7 +59,9 @@ NETWORK ID     NAME      DRIVER    SCOPE
     inet6 fe80::d866:e6ff:fee1:339/64 scope link
        valid_lft forever preferred_lft forever
 ```
+
 查看网桥信息:
+
 ```sh
 # yum install -y bridge-utils
 
@@ -63,7 +70,9 @@ bridge name     bridge id               STP enabled     interfaces
 docker0         8000.0242802181e1       no              veth3f79716
                                                         vethdcfdc20
 ```
+
 查看容器分配的ip和网关信息：
+
 ```sh
 # docker inspect nginx-app
 "Gateway": "172.17.0.1",
@@ -77,9 +86,11 @@ docker0         8000.0242802181e1       no              veth3f79716
 "GlobalIPv6PrefixLen": 0,
 "IPAddress": "172.17.0.3",
 ```
+
 可以看到容器默认时间是可以相互通信的，这是docker默认运行的通信方式。
 
 还可以通过查看网桥信息看查看哪些容器网卡连接上来：
+
 ```sh
 docker network inspect bridge
 
@@ -100,34 +111,38 @@ docker network inspect bridge
 	}
 }
 ```
+
 可以看到两个容器连接到了默认的bridge 网桥。
 
-
 ### 2. host 网络模式
-- host 网络模式需要在创建容器时通过参数 --net host 或者 --network host 指定；
 
-- 采用 host 网络模式的 Docker Container，可以直接使用宿主机的 IP 地址与外界进行通信，若宿主机的 eth0 是一个公有 IP，那么容器也拥有这个公有 IP。同时容器内服务的端口也可以使用宿主机的端口，无需额外进行 NAT 转换；
+-   host 网络模式需要在创建容器时通过参数 --net host 或者 --network host 指定；
 
-- host 网络模式可以让容器共享宿主机网络栈，这样的好处是外部主机与容器直接通信，但是容器的网络缺少隔离性。
+-   采用 host 网络模式的 Docker Container，可以直接使用宿主机的 IP 地址与外界进行通信，若宿主机的 eth0 是一个公有 IP，那么容器也拥有这个公有 IP。同时容器内服务的端口也可以使用宿主机的端口，无需额外进行 NAT 转换；
+
+-   host 网络模式可以让容器共享宿主机网络栈，这样的好处是外部主机与容器直接通信，但是容器的网络缺少隔离性。
 
 通过 ip addr 命令查看容器内容网络信息 ，会发现跟宿主机的网络信息是一样的。也就说容器可以直接利用宿主机的网络ip进行直连。
 
-
 ### 3. none 网络模式
-- none 网络模式是指禁用网络功能，只有 lo 接口 local 的简写，代表 127.0.0.1，即 localhost 本地环回接口。在创建容器时通过参数 --net none 或者 --network none 指定；
-- none 网络模式即不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。可以说 none 模式为 Docke Container 做了极少的网络设定，但是俗话说得好“少即是多”，在没有网络配置的情况下，作为 Docker 开发者，才能在这基础做其他无限多可能的网络定制开发。这也恰巧体现了 Docker 设计理念的开放。
+
+-   none 网络模式是指禁用网络功能，只有 lo 接口 local 的简写，代表 127.0.0.1，即 localhost 本地环回接口。在创建容器时通过参数 --net none 或者 --network none 指定；
+-   none 网络模式即不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。可以说 none 模式为 Docke Container 做了极少的网络设定，但是俗话说得好“少即是多”，在没有网络配置的情况下，作为 Docker 开发者，才能在这基础做其他无限多可能的网络定制开发。这也恰巧体现了 Docker 设计理念的开放。
 
 ### 4.container 网络模式
-- Container 网络模式是 Docker 中一种较为特别的网络的模式。在创建容器时通过参数 --net container:已运行的容器名称|ID 或者 --network container:已运行的容器名称|ID 指定；
-- 处于这个模式下的 Docker 容器会共享一个网络栈，这样两个容器之间可以使用 localhost 高效快速通信。
-- Container 网络模式即新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样两个容器除了网络方面相同之外，其他的如文件系统、进程列表等还是隔离的。
+
+-   Container 网络模式是 Docker 中一种较为特别的网络的模式。在创建容器时通过参数 --net container:已运行的容器名称|ID 或者 --network container:已运行的容器名称|ID 指定；
+-   处于这个模式下的 Docker 容器会共享一个网络栈，这样两个容器之间可以使用 localhost 高效快速通信。
+-   Container 网络模式即新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样两个容器除了网络方面相同之外，其他的如文件系统、进程列表等还是隔离的。
 
 ### link
+
 docker run --link 可以用来连接两个容器，使得源容器（被链接的容器）和接收容器（主动去链接的容器）之间可以互相通信，并且接收容器可以获取源容器的一些数据，如源容器的环境变量。
 
 这种方式官方已不推荐使用，并且在未来版本可能会被移除。
 
 ### 自定义网络
+
 从 Docker 1.10 版本开始，docker daemon 实现了一个内嵌的 DNS server，使容器可以直接通过容器名称通信。方法很简单，只要在创建容器时使用 --name 为容器命名即可。
 但是使用 Docker DNS 有个限制：只能在 user-defined 网络中使用。也就是说，默认的 bridge 网络是无法使用 DNS 的，所以我们就需要自定义网络。
 
@@ -136,6 +151,7 @@ docker run --link 可以用来连接两个容器，使得源容器（被链接�
         docker network create custom_network
 
 值得注意的是，网络名称是网络名称，网络驱动是网络驱动。
+
 ```
 [root@k8s-master ~]# docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
@@ -147,7 +163,6 @@ NETWORK ID     NAME      DRIVER    SCOPE
 通过自定义网络模式 custom_network 创建容器：
 
     docker run -di --name bbox05 --net custom_network busybox
-
 
 通过 docker network connect 网络名称 容器名称 为容器连接新的网络模式。
 
@@ -178,5 +193,5 @@ docker run -di --name custom_bbox02 --net custom_network busybox
 
     ping 172.19.0.3
     ping custom_bbox02
-    
+
 效果是一样的

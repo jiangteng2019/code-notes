@@ -1,6 +1,7 @@
 ## idea使用系统maven配置
 
 默认情况下idea使用默认自带的maven，具体可以在如下目录下查看:
+
 ```
 file -> setting -> build -> build tools -> maven -> maven home path -> bundled
 ```

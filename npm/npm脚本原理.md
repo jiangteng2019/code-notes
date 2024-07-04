@@ -1,6 +1,7 @@
 ## npm脚本原理
 
-每执行 npm run ..  就会新建一个shell，并且会将 node_modules/.bin 文件夹添加到环境变量。这就意味着bin目录下的可执行脚本都可以运行在当前的命令行上下文中，可以直接使用命令，而不需要加入路径。例如：
+每执行 npm run .. 就会新建一个shell，并且会将 node_modules/.bin 文件夹添加到环境变量。这就意味着bin目录下的可执行脚本都可以运行在当前的命令行上下文中，可以直接使用命令，而不需要加入路径。例如：
+
 ```json
 "scripts": {
     "dev": "vite",
@@ -15,6 +16,7 @@
     "format": "prettier --write src/"
   },
 ```
+
 现在可以直接使用
 
     npm run test:unit
@@ -32,12 +34,13 @@
     "testShell": "powershell -File testShell.ps1"
   },
 ```
+
 ```js
 // testNode.js
-console.log("node");
+console.log('node')
 ```
+
 ```sh
 # testShell.ps1
 Write-Host "shell"
 ```
-

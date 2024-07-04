@@ -7,12 +7,15 @@
 实例：
 
 存在一个接口:
+
 ```java
 interface Hello {
     void morning(String name);
 }
 ```
+
 如果需要调用morning方法，正常情况下需要编写一个实现类:
+
 ```java
 public class HelloWorld implements Hello {
     public void morning(String name) {
@@ -20,14 +23,18 @@ public class HelloWorld implements Hello {
     }
 }
 ```
+
 然后调用:
+
 ```java
 Hello hello = new HelloWorld();
 hello.morning("Bob");
 ```
+
 但实际上还有另外的方式:
 
 观察方法，实例方法实际上包含一个this对象、和若干参数组成。于是对一个方法记性抽出处理，例如 morning方法，方法体的另一种形势表示：
+
 ```java
 InvocationHandler handler = new InvocationHandler() {
     @Override
@@ -40,7 +47,9 @@ InvocationHandler handler = new InvocationHandler() {
     }
 };
 ```
+
 最终调用morning方法:
+
 ```java
 Hello hello = (Hello) Proxy.newProxyInstance(
     Hello.class.getClassLoader(), // 传入ClassLoader
@@ -51,9 +60,11 @@ hello.morning("Bob");
 // public abstract void Hello.morning(java.lang.String)
 // Good morning, Bob
 ```
+
 可以看到通过发射实现一个接口的动态代理的步骤有:
-- 实现接口的方法，通过InvocationHandler进行代理；
-- 创建代理的接口的实体类，需要传入对应的类加载器、需要实现的接口、和实现的接口的方法体（InvocationHandler）
-- 正常进行调用
+
+-   实现接口的方法，通过InvocationHandler进行代理；
+-   创建代理的接口的实体类，需要传入对应的类加载器、需要实现的接口、和实现的接口的方法体（InvocationHandler）
+-   正常进行调用
 
 本质上动态代理其实就是JVM帮我们自动编写了一个实现类（不需要源码，可以直接生成字节码），并不存在可以直接实例化接口的黑魔法。

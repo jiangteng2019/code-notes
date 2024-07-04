@@ -1,4 +1,3 @@
-
 ## k8s更改标签的影响
 
 在Kubernetes（k8s）中，Deployment是一种管理Pod和ReplicaSet的方式，以确保指定数量的Pod副本始终在运行。Deployment使用标签选择器（Label Selector）来确定哪些Pod应该由ReplicaSet管理。

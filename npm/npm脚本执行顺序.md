@@ -1,6 +1,5 @@
 ## npm脚本执行顺序
 
-
 ### 这是package.json 的脚本配置：
 
 ```json
@@ -15,13 +14,17 @@
 ### 并行执行:
 
 顾名思义，脚本是一起执行的:
+
 ```sh
  "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1 & git add .",
 ```
+
 这种的显然在代码逻辑中是不合适的。
 
 ### 继发执行：
+
 前一个任务成功，才执行下一个任务
+
 ```sh
  "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1 && git add .",
 ```
@@ -29,6 +32,7 @@
 这两个符号是 Bash 的功能，在powershell也可以用。
 
 我们配置一下脚本:
+
 ```json
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -40,14 +44,18 @@
 ```
 
 其中testNode.js:
+
 ```js
-console.log("node");
-throw new Error();
-``` 
+console.log('node')
+throw new Error()
+```
+
 testShell:
+
 ```
 Write-Host "shell"
 ```
+
 然后运行测试：
 
 testAll1 脚本在testNode脚本发生错误后继续执行testShell脚本。

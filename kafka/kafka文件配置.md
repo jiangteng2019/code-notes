@@ -1,4 +1,5 @@
 ## kafka文件配置
+
 ```sh
 # 启用KRaft模式，KRaft是一种复制协议，用于实现Kafka的高可用性和持久性。
 KAFKA_ENABLE_KRAFT=yes

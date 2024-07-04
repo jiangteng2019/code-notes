@@ -4,29 +4,33 @@
 
 1. **打开配置文件**:
    使用文本编辑器打开`/etc/squid/squid.conf`文件。例如，你可以使用`nano`或`vi`编辑器：
-   ```bash
-   sudo nano /etc/squid/squid.conf
-   ```
+
+    ```bash
+    sudo nano /etc/squid/squid.conf
+    ```
 
 2. **定义访问控制列表（ACL）**:
    在`squid.conf`文件中，你需要定义一个访问控制列表（ACL）来指定哪些IP地址被允许访问。例如，要允许192.168.0.1这个IP地址，你可以添加如下行：
-   ```plaintext
-   acl allowed_ip src 192.168.0.1
-   ```
+
+    ```plaintext
+    acl allowed_ip src 192.168.0.1
+    ```
 
 3. **配置http_access规则**:
    定义了ACL之后，需要使用`http_access`指令来允许或拒绝这个IP地址的访问。为了允许192.168.0.1访问，你应该添加：
-   ```plaintext
-   http_access allow allowed_ip
-   ```
 
-   确保这条规则位于任何拒绝访问的规则之前。因为Squid是按顺序处理这些规则的，一旦匹配到一条规则，后面的规则就不会再处理了。
+    ```plaintext
+    http_access allow allowed_ip
+    ```
+
+    确保这条规则位于任何拒绝访问的规则之前。因为Squid是按顺序处理这些规则的，一旦匹配到一条规则，后面的规则就不会再处理了。
 
 4. **重启Squid服务**:
    配置完成后，需要重启Squid服务以应用更改。可以使用如下命令来重启服务：
-   ```bash
-   sudo systemctl restart squid
-   ```
+
+    ```bash
+    sudo systemctl restart squid
+    ```
 
 5. **测试配置**:
    配置完成后，你可以尝试从IP地址192.168.0.1进行访问测试，看看是否能够按照你的设置访问网络。
@@ -34,38 +38,43 @@
 这些步骤应该能帮你设置Squid服务器，允许特定的IP地址访问。如果你遇到任何问题，确保检查Squid的日志文件，通常位于`/var/log/squid/`目录下，以获取有关错误或问题的更多信息。
 
 ### 定义地址段访问：
+
 如果你想要配置Squid以允许一个IP地址范围（如192.168.0.1至192.168.0.55）的设备访问，你可以通过指定这个范围来设置ACL（访问控制列表）。下面是如何配置这个IP地址范围的详细步骤：
 
 1. **编辑Squid配置文件**:
    打开你的Squid配置文件，通常位于`/etc/squid/squid.conf`。使用你喜欢的文本编辑器，例如：
-   ```bash
-   sudo nano /etc/squid/squid.conf
-   ```
+
+    ```bash
+    sudo nano /etc/squid/squid.conf
+    ```
 
 2. **定义IP地址范围的ACL**:
    在配置文件中定义一个新的ACL，专门用于这个IP地址范围。可以使用CIDR（无类别域间路由）表示法或直接指定范围。对于192.168.0.1至192.168.0.55，可以这样写：
-   ```plaintext
-   acl allowed_range src 192.168.0.1-192.168.0.55
-   ```
 
-   这行命令创建了一个名为`allowed_range`的ACL，包括所有从192.168.0.1到192.168.0.55的IP地址。
+    ```plaintext
+    acl allowed_range src 192.168.0.1-192.168.0.55
+    ```
+
+    这行命令创建了一个名为`allowed_range`的ACL，包括所有从192.168.0.1到192.168.0.55的IP地址。
 
 3. **配置http_access规则**:
    创建了ACL后，你需要在Squid配置文件中添加一个`http_access`规则来允许这个范围内的IP地址访问：
-   ```plaintext
-   http_access allow allowed_range
-   ```
 
-   请确保将这条允许规则放在任何通用拒绝规则之前。Squid的处理顺序是从上到下，一旦匹配到第一个规则，就不会继续处理后续的规则了。
+    ```plaintext
+    http_access allow allowed_range
+    ```
+
+    请确保将这条允许规则放在任何通用拒绝规则之前。Squid的处理顺序是从上到下，一旦匹配到第一个规则，就不会继续处理后续的规则了。
 
 4. **保存并关闭配置文件**:
    保存对配置文件的更改，并关闭编辑器。
 
 5. **重启Squid服务**:
    为了使更改生效，你需要重启Squid服务。在大多数Linux系统中，可以使用以下命令来重启服务：
-   ```bash
-   sudo systemctl restart squid
-   ```
+
+    ```bash
+    sudo systemctl restart squid
+    ```
 
 6. **测试配置的有效性**:
    配置完成后，从范围内的任何一个IP尝试访问，以确保设置正确。如果访问不成功，检查配置文件中的规则顺序，以及Squid日志文件，通常位于`/var/log/squid/`，以便诊断问题。

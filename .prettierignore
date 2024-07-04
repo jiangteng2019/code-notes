@@ -1,0 +1,6 @@
+.gitignore
+.sh
+.husky
+.node_modules
+.prettierrc
+.ps1

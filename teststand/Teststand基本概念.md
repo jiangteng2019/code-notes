@@ -1,4 +1,5 @@
 ## TestStand基本概念
+
 在TestStand中，通过序列文件（Sequence File）、主序列（Main Sequence）、子序列（Subsequence）、步骤组（Step Group）、步骤（Step）这种树状结构来组织不同的测试和操作。
 
 1. 步骤（Step）步骤是TestStand测试程序中的最小单元，无论多么复杂的测试程序也是由许多步骤构成的。

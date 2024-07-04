@@ -3,6 +3,7 @@
 要想让服务暴露出去需要配置一个service用于流量转发：
 
 查看pod的标签
+
 ```sh
 [root@k8s-master ~]# kubectl get pods --show-labels
 NAME    READY   STATUS    RESTARTS        AGE   LABELS
@@ -13,16 +14,16 @@ nginx   1/1     Running   1 (2d21h ago)   10d   app.kubernetes.io/name=nginx
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+    name: my-service
 spec:
-  type: NodePort
-  selector:
-    app.kubernetes.io/name: nginx
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 30007
+    type: NodePort
+    selector:
+        app.kubernetes.io/name: nginx
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+          nodePort: 30007
 ```
 
 配置好这个service，可以提通过任意node节点的ip+端口访问pod中的服务。

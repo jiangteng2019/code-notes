@@ -5,6 +5,7 @@
 ## 1、初始化
 
 ### 网卡配置：
+
 由于官方镜像并没有开启默认的网卡配置，故这里需要先配置网卡
 
 ```sh
@@ -19,12 +20,14 @@ systemctl restart network
 ### 安装网络工具
 
 还是由于官方的镜像太过于纯净，连ifconfig查看网络的命令都没有安装，所以，wget 命令需要在后面切换yum源的时候需要用到所以需要提前安装。
+
 ```sh
 #由于安装新的yum源之前需要备份yum源配置文件，后面使用 wget时候，发现没有wget命令，另外使用yum install wget 的时候 ，发现没有基础的yum文件无法访问网络，所以最好提前安装上。
 yum install net-tools wget -y
 ```
 
 ### 关闭防火墙
+
 ```sh
 # 关闭防火墙
 systemctl stop firewalld
@@ -32,39 +35,46 @@ systemctl stop firewalld
 systemctl disable firewalld
 ```
 
-
 ### [关闭seLinux](#selinux)
+
 ```sh
 # 临时禁用selinux
 setenforce 0
 
-# 永久关闭selinux 
+# 永久关闭selinux
 sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/sysconfig/selinux
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 ```
 
 ### [禁用Swap(交换)分区](#swap分区)
+
 ```
 swapoff -a
 sed -i 's/.*swap.*/#&/' /etc/fstab
 ```
 
 ### 切换阿里云yum源
+
 ```sh
 # 备份官方的原yum源的配置
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 # 下载Centos-7.repo文件
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 ```
+
 ### 增加阿里云的Docker-ce的源：
+
 ```sh
 # 安装yum管理工具
 yum install -y yum-utils
 # 配置阿里云的docker源
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
+
 ### 增加kubernates 源
+
 这段命令直接粘贴需要终端支持，测试powershell 是可以直接支持粘贴的
+
 ```sh
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -80,21 +90,25 @@ EOF
 ## 2、基础安装
 
 ### 通用安装包
+
 ```sh
 yum install vim bash-completion net-tools gcc -y
 ```
 
 ### 安装docker
+
 ```sh
 yum install docker-ce
 # 启动Docker
-systemctl start docker 
+systemctl start docker
 # 设置自动启动
-systemctl enable docker 
+systemctl enable docker
 ```
 
 ### Kubernetes安装
+
 #### Master上安装（控制面）:
+
 ```sh
 # 安装kubeadm、kubectl、kubelet
 yum install -y kubectl kubeadm kubelet
@@ -103,6 +117,7 @@ systemctl enable kubelet && systemctl start kubelet
 ```
 
 #### Node上安装（工作节点）：
+
 ```sh
 # 安装kubeadm、kubelet
 yum install -y kubeadm kubelet
@@ -115,22 +130,27 @@ systemctl enable kubelet && systemctl start kubelet
 ### 准备工作
 
 虚拟机安装后每台机器的名称都是 localhost.localdomain ，为了不必要的麻烦,需要在每一台机器上更改一个不一样的名称：
+
 ```sh
 hostnamectl --static set-hostname k8s-master # master节点
 hostname $hostname # 立刻生效
 ```
+
 ```sh
 hostnamectl --static set-hostname k8s-node1 # node节点
 hostname $hostname # 立刻生效
 ```
 
 ### 初始化master节点
+
 执行命令：[kubeadm init](#kubeadm-init)
+
 ```sh
 kubeadm init --image-repository registry.aliyuncs.com/google_containers --apiserver-advertise-address 192.168.147.33 --pod-network-cidr=10.122.0.0/16 --token-ttl 0
 ```
 
 ### 关于报错
+
 初始化过程中，不出意外的话意外要出现了:
 
 1. 如果报 container runtime is not running:的错误，此时需要执行下面命令：
@@ -139,16 +159,19 @@ kubeadm init --image-repository registry.aliyuncs.com/google_containers --apiser
     systemctl restart containerd
     ```
 1. 如果报 Initial timeout of 40s passed，4分钟超时错误后需要执行：
-执行命令：[ctr](#ctr)
+   执行命令：[ctr](#ctr)
+
 ```sh
 ctr -n k8s.io images pull -k registry.aliyuncs.com/google_containers/pause:3.6
 ctr -n k8s.io images tag registry.aliyuncs.com/google_containers/pause:3.6 registry.k8s.io/pause:3.6
 # 重命名镜像registry.aliyuncs.com/google_containers/pause:3.6的tag为registry.k8s.io/pause:3.6
 kubeadm reset -f
 ```
+
 然后继续执行上面kubeadm init命令。一切顺利的话：
 
 >
+
     Your Kubernetes control-plane has initialized successfully!
 
     To start using your cluster, you need to run the following as a regular user:
@@ -170,15 +193,19 @@ kubeadm reset -f
     kubeadm join 192.168.147.133:6443 --token v2nbj9.n96aegm563ub38zt  --discovery-token-ca-cert-hash sha256:1a6b394358789c92e09a55eb0ae8279d5054c89aef867d4dca9dae1cf4ccf859
 
 ### 根据提示，我们执行：
+
 ```sh
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
 ### 查看Master节点工作状态：
+
 ```sh
 kubectl get nodes
 ```
+
 此时是未准备状态。
 
 ### [安装网络插件（Calico）](#kubectlcreate)
@@ -187,13 +214,17 @@ kubectl get nodes
 # 执行命令
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/tigera-operator.yaml
 ```
+
 然后执行：
+
 ```sh
 # 下载到任意的文件夹:
 wget https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/custom-resources.yaml
 vim custom-resources.yaml
 ```
-这个是  custom-resources 文件内容，需要将cidr 网段的内容与 集群初始化时参数--pod-network-cidr  对应上。
+
+这个是 custom-resources 文件内容，需要将cidr 网段的内容与 集群初始化时参数--pod-network-cidr 对应上。
+
 ```sh
 # This section includes base Calico installation configuration.
 # For more information, see: https://projectcalico.docs.tigera.io/master/reference/installation/api#operator.tigera.io/v1.Installation
@@ -223,7 +254,9 @@ metadata:
   name: default
 spec: {}
 ```
+
 执行
+
 ```sh
 kubectl create -f custom-resources.yaml
 ```
@@ -233,46 +266,56 @@ kubectl create -f custom-resources.yaml
 ### 加入Node节点
 
 如果没有改主机名，请先修改
+
 ```sh
 hostnamectl --static set-hostname k8s-node1 #node1节点
 hostname $hostname # 立刻生效
 ```
+
 然后执行上述的命令：
+
 ```sh
 kubeadm join 192.168.147.133:6443 --token v2nbj9.n96aegm563ub38zt  --discovery-token-ca-cert-hash sha256:1a6b394358789c92e09a55eb0ae8279d5054c89aef867d4dca9dae1cf4ccf859
 ```
 
 如果之前没有保存，可以再Master节点上执行：
+
 ```
 kubeadm token create --print-join-command
 ```
 
 显示下列内容证明已经加入k8s集群，但是在Master节点上查看当前的node节点的状态为notReady。
+
 ```
 This node has joined the cluster:
 * Certificate signing request was sent to apiserver and a response was received.
 * The Kubelet was informed of the new secure connection details.
 ```
+
 ### 报错
 
 如果报 container runtime is not running:的错误，此时需要执行下面命令：
+
 ```sh
 rm -rf /etc/containerd/config.toml
 systemctl restart containerd
 # 再执行join命令
 ```
+
 如果节点一直not Ready：
 查看日志：
 
-    journalctl -f -u kubelet.service 
+    journalctl -f -u kubelet.service
 
 执行命令：[k8s.io images pull](#ctr)
+
 ```sh
-ctr -n k8s.io images pull -k registry.aliyuncs.com/google_containers/pause:3.6 
-ctr -n k8s.io images tag registry.aliyuncs.com/google_containers/pause:3.6 registry.k8s.io/pause:3.6 
+ctr -n k8s.io images pull -k registry.aliyuncs.com/google_containers/pause:3.6
+ctr -n k8s.io images tag registry.aliyuncs.com/google_containers/pause:3.6 registry.k8s.io/pause:3.6
 ```
 
 等待一段时间后。会发现：集群已经成功运行
+
 ```
 [root@k8s-master yum.repos.d]# kubectl get nodes
 NAME         STATUS   ROLES           AGE   VERSION
@@ -282,44 +325,51 @@ k8s-node2    Ready    <none>          16h   v1.28.2
 ```
 
 ## 4、重置k8s集群
+
 当虚拟接的网络发生变更之后，发现整个集群都不可用了。因为k8s集群高度依赖网络进行通信。学习环境可以重置集群,使用 kubeadm 工具重置集群的基本步骤：
 
 ### 在控制面（Master）节点和工作节点（Worker Nodes）上执行：
 
 1. **停止 kubelet 服务**：
-   ```sh
-   sudo systemctl stop kubelet
-   ```
+
+    ```sh
+    sudo systemctl stop kubelet
+    ```
 
 2. **使用 kubeadm 重置**：
-   ```sh
-   sudo kubeadm reset
-   ```
-   这个命令会清除 kubelet 的配置，移除 Kubernetes 的相关容器，以及执行一些清理操作。
+
+    ```sh
+    sudo kubeadm reset
+    ```
+
+    这个命令会清除 kubelet 的配置，移除 Kubernetes 的相关容器，以及执行一些清理操作。
 
 3. **清理 iptables**：
    清理可能残留的 iptables 规则，这些规则可能会干扰集群的重新初始化。
-   ```sh
-   sudo iptables -F
-   sudo iptables -X
-   sudo iptables -t nat -F
-   sudo iptables -t nat -X
-   sudo iptables -t mangle -F
-   sudo iptables -t mangle -X
-   sudo iptables -P FORWARD ACCEPT
-   ```
+    ```sh
+    sudo iptables -F
+    sudo iptables -X
+    sudo iptables -t nat -F
+    sudo iptables -t nat -X
+    sudo iptables -t mangle -F
+    sudo iptables -t mangle -X
+    sudo iptables -P FORWARD ACCEPT
+    ```
 
 ### （控制节点）重新初始化集群：
 
 在控制面节点上，您可以使用 kubeadm init 命令来重新初始化集群。在执行此命令时，可以指定新的 IP 地址作为 API server 的地址。
 
 新 IP 地址是 `192.168.147.137`，执行命令：
+
 ```sh
 kubeadm init --image-repository registry.aliyuncs.com/google_containers --apiserver-advertise-address 192.168.147.137 --pod-network-cidr=10.122.0.0/16 --token-ttl 0
 ```
+
 完成初始化后，按照提示操作，配置 kubectl 工具的使用环境。
 
 ### （控制节点）网络重新初始化
+
 ```
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/tigera-operator.yaml
 
@@ -328,22 +378,22 @@ kubectl create -f custom-resources.yaml
 
 ### 将工作节点加入集群：
 
-
 使用命令：
+
 ```sh
 kubeadm join 192.168.147.137:6443 --token 0c4gsd.ack5w3mvuyuauivl  --discovery-token-ca-cert-hash sha256:0ebb75771d6616cca43750771263760f28f31044da103de93ac6a010fc5afff9
 ```
 
+---
 
-
-
-
-------------
 # 名词解释
-------------
+
+---
 
 ## kubeadm init：
->   
+
+>
+
     这是一条用于初始化Kubernetes集群的`kubeadm`命令。
 
     1. `kubeadm init`
@@ -365,9 +415,10 @@ kubeadm join 192.168.147.137:6443 --token 0c4gsd.ack5w3mvuyuauivl  --discovery-t
 
     在后续的步骤中,通过部署网络插件(如Flannel、Calico等)为集群提供Pod网络互通,然后再使用`kubeadm join`命令将其他节点加入集群,从而构建一个完整的Kubernetes集群。
 
----------
+---
 
 ## ctr
+
 这两条命令都涉及到容器镜像的拉取和标记,它们是在配置Kubernetes环境时可能会用到的。
 
 1. `ctr -n k8s.io images pull -k registry.aliyuncs.com/google_containers/pause:3.6`
@@ -390,9 +441,12 @@ pause容器镜像是Kubernetes集群中非常重要的基础组件之一,它的�
 
 这两条命令通常在部署Kubernetes集群的kubeadm init阶段会执行,以保证必需的pause镜像可用。
 
----------------
+---
+
 # selinux
+
 >
+
     SELinux 全称为 Security-Enhanced Linux,是一种强制访问控制安全机制,它作为Linux内核的一个安全模块运行,限制程序只能访问它们授权的文件。
 
     `setenforce 0` 这条命令的作用是临时将 SELinux 设置为 permissive 模式,也就是允许模式。在此模式下,SELinux 仅记录访问违规而不强制执行策略。
@@ -413,15 +467,18 @@ pause容器镜像是Kubernetes集群中非常重要的基础组件之一,它的�
     - 将 /etc/sysconfig/selinux 文件中的 SELINUX=permissive 替换为 SELINUX=disabled
 
     第二条:
-    - 同样使用 sed 
-    - 双引号让 sed 可以识别 / 
+    - 同样使用 sed
+    - 双引号让 sed 可以识别 /
     - `g` 表示全局替换,将该文件中所有 SELINUX=enforcing 改为 SELINUX=disabled
 
     执行这两条命令后,SELinux 就被永久关闭了。关闭 SELinux 会降低系统安全性,但也消除了它可能带来的一些程序兼容性问题。在生产环境中还是建议开启并正确配置 SELinux。
--------------
+
+---
 
 ## swap分区
+
 >
+
     这两条命令用于永久禁用Linux系统中的交换分区(swap)。
 
     1. `swapoff -a`
@@ -446,9 +503,12 @@ pause容器镜像是Kubernetes集群中非常重要的基础组件之一,它的�
 
     禁用交换分区通常是为了彻底利用系统物理内存,避免内存与交换分区之间的数据交换,从而获得更佳的性能表现,尤其对于需要大内存的任务非常有用。但也要权衡内存占用,避免内存不足导致系统崩溃。
 
------------
+---
+
 ## kubectlcreate
->   
+
+>
+
     这条命令是在Kubernetes集群中创建Calico网络插件所需的Tigera Operator。
 
     让我们分解一下命令中的各个部分:
@@ -457,7 +517,7 @@ pause容器镜像是Kubernetes集群中非常重要的基础组件之一,它的�
     - `kubectl`是Kubernetes的命令行工具
     - `create`是其子命令,用于从文件或URL创建Kubernetes资源
 
-    2. `-f` 
+    2. `-f`
     - 该标志指定要创建资源的文件源
 
     3. `https://raw.githubusercontent.com/projectcalico/calico/v3.26.4/manifests/tigera-operator.yaml`

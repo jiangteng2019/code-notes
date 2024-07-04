@@ -2,8 +2,8 @@
 
 使用ip地址启用https协议访问harbor
 
-
 ### 创建目录
+
 ```sh
 mkdir /root/cert
 cd /root/cert/
@@ -52,7 +52,9 @@ openssl x509 -inform PEM -in server.crt -out server.cert
 
 
 ```
+
 测试目录下应有下列文件：
+
 ```sh
 [root@localhost cert]# ll
 total 32
@@ -67,8 +69,8 @@ total 32
 
 ```
 
-
 ### docker证书配置
+
 ```sh
 mkdir -p /etc/docker/certs.d/10.139.203.31
 cp server.cert /etc/docker/certs.d/10.139.203.31
@@ -80,6 +82,7 @@ systemctl restart docker
 ```
 
 ### Harbor 证书配置
+
 ```sh
 mkdir -p /data/cert
 cp server.crt /data/cert/
@@ -88,6 +91,7 @@ cp server.key /data/cert/
 ```
 
 配置文件
+
 ```sh
 # http related config
 # http:
@@ -116,17 +120,20 @@ docker-compose up -d
 ```
 
 ### 客户端配置
+
 客户端ip为 10.139.203.35
 
 harbor服务为 10.139.203.31
 
 在客户端上创建目录：
+
 ```sh
 # 表示认可31服务器的证书
 mkdir -p /etc/docker/certs.d/10.139.203.31
 ```
 
 拷贝证书到客户端：
+
 ```sh
 # 在harbor的服务器上执行，将证书复制到客户端机器
 scp /root/cert/server.key root@10.139.203.35:/etc/docker/certs.d/10.139.203.31

@@ -1,6 +1,6 @@
 ## es6模块路径解析规则
 
- ES6 模块中关于模块路径解析的主要规则包括:
+ES6 模块中关于模块路径解析的主要规则包括:
 
 1. 路径别名:可以为常用路径配置别名,例如使用`@`指向`src`目录
 
@@ -16,19 +16,19 @@
 
 ```js
 // 路径别名
-import Utils from '@/utils'; 
+import Utils from '@/utils'
 
 // 文件扩展名省略
-import Main from './views/main';
+import Main from './views/main'
 
 // 目录导入,等价于 ./views/index.js
-import Views from './views'; 
+import Views from './views'
 
 // 节点模块导入
-import chalk from 'chalk';
+import chalk from 'chalk'
 
 // 相对路径导入
-import User from '../models/user';
+import User from '../models/user'
 ```
 
 在解析模块路径时,会依次尝试路径别名、文件扩展名解析、目录导入等规则,直到成功为止。

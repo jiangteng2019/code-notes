@@ -1,6 +1,5 @@
 ## Linux中service命令与systemctl命令
 
-
 在Linux中，service和systemctl这两种命令都用于管理系统服务，但它们分别属于不同的系统初始化和服务管理框架。这两个命令的存在主要是因为Linux系统的发展历程和不同发行版的选择。
 
 service：service命令与System V init（简称SysV init）系统关联，SysV init是较早的Linux系统中使用的初始化和服务管理框架。在这个框架中，服务的启动脚本位于/etc/init.d/目录下。service命令用于启动、停止、重启和查询这些服务的状态。

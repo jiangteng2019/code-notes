@@ -3,11 +3,13 @@
 因为远程的git hooks 不好用，所以引入了husky进行方便的添加钩子调用。很显然我们引入这一类的工具在于使用前端工程项目的自动化。
 
 假如我们相对提交的代码实现自动化的步骤如下：
+
 1. 使用eslint对代码进行格式化检查；
 1. 使用prettier对代码进行风格统一；
 1. 使用commitlint 对提交信息进行规范化；
 
 很自然我们需要使用husky 的钩子实现上述功能；我们添加三个钩子：
+
 ```sh
 npx husky add .husky/commit-msg 'npx commitlint --edit $1'
 
@@ -36,7 +38,7 @@ npx husky add .husky/pre-commit "npm run format:add"
 
 ```sh
 # 安装
-npm install --save-dev lint-staged 
+npm install --save-dev lint-staged
 
 # 添加钩子
 npx husky add .husky/pre-commit "npx lint-staged"
@@ -53,7 +55,9 @@ npx husky add .husky/pre-commit "npx lint-staged"
     ]
 }
 ```
+
 提交代码的时候执行步骤如下：
+
 1. 执行husky钩子，进而执行lint-staged 脚本，
 1. lint-staged读取对应的配置，
 1. 对暂存区的文件调用对应的eslint 和 prettier 记性代码检查和格式化。

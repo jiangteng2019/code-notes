@@ -3,11 +3,13 @@
 1. 首先下载harbor的安装包，然后解压，安装包在github上，下载地址：https://github.com/goharbor/harbor/releases
 
 1. 假设你已经下载包harbor压缩包，并且已经上传到服务器,接下来解压安装包：
+
 ```bash
 tar -zxvf harbor-offline-installer-v2.11.0.tgz
 ```
 
 1. 进入harbor目录，先配置一下：
+
 ```sh
 # 拷贝配置文件
 cp harbor.yml.tmpl harbor.yml

@@ -1,11 +1,12 @@
-- 新建一个空白文件夹 empty
-- 待删除的文件夹为dist
-- 使用命令：
+-   新建一个空白文件夹 empty
+-   待删除的文件夹为dist
+-   使用命令：
 
 ```sh
 robocopy empty dist /purge
 robocopy empty_dir will_delete_dir /purge
 ```
+
 robocopy: 这是 Windows 中的一个命令行实用程序，用于复制文件和目录。
 
 empty_dir: 这是要复制的源目录。

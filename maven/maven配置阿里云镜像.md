@@ -1,4 +1,3 @@
-
 ## maven配置阿里云镜像
 
 ```xml
@@ -10,5 +9,3 @@
     <url>https://maven.aliyun.com/repository/central</url>
 </mirror>
 ```
-
-

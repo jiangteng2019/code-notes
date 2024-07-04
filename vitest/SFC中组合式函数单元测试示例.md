@@ -5,6 +5,7 @@
 这里的函数指的是纯粹的工具函数，可以独立运行、也可以在任意地方运行的函数。从实践来说，这一类的函数应该属于工具函数，放在单独的工具utils文件夹下，针对这一类的工具函数，对于单元测试来说应该很简单才对。但是如何不小心将其写在了vue的setup语法糖的组件内部，该如何进行测试呢？
 
 首先将待测试函数进行导出:
+
 ```js
 function calculateTime(timeStamp: number): Array<number> {
     try {
@@ -37,7 +38,9 @@ defineExpose({
 })
 
 ```
+
 在单元测试文件内:
+
 ```js
 // vitest api导入
 import { describe, it, expect, beforeEach, afterEach } from 'vitest'

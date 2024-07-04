@@ -1,6 +1,7 @@
 ## mybatis分页插件PageHelper实现原理
 
 ### PageHelper.startPage方法重要提示
+
 ### 只有紧跟在PageHelper.startPage方法后的第一个Mybatis的查询（Select）方法会被分页。
 
 PageHelper是一个MyBatis的插件，用于简化MyBatis中的分页查询操作。它的实现原理大致如下：
@@ -20,7 +21,9 @@ PageHelper是一个MyBatis的插件，用于简化MyBatis中的分页查询操�
 ### QA：PageInfo中的总数是如何得出的？
 
 PageInfo对象实例化时并不会重新查询数据库来计算总记录数。当你通过
+
 ```java
 PageInfo<DirectiveSheetEntity> pageInfo = new PageInfo<>(directiveSheetEntities);
 ```
+
 PageHelper会在修改SQL执行计数查询（Count Query）来获取总数，这个计数查询通常会在分页查询之前执行，因此在结果集返回给PageInfo构造方法时，总数信息已经通过之前的计数查询获得，并存储在PageHelper管理的上下文中。当创建PageInfo对象时，它会尝试从这个上下文中获取总数，而不需要再次查询数据库。

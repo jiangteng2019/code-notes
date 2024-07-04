@@ -1,9 +1,11 @@
 ## npm使用run-p运行多个命令
 
 使用ts开发的vite项目中，构建脚本是这样的:
+
 ```sh
 "build": "run-p type-check \"build-only {@}\" --",
 ```
+
 ### 脚本解释：
 
     run-p：
@@ -28,19 +30,19 @@ build-only 是一个自定义脚本，{@} 是 npm-run-all 的一个特殊语法�
 这个脚本并行执行 type-check 和 build-only 这两个脚本，其中 build-only 脚本将接收任何在 run-p 命令之后传递的额外参数。这在构建过程中可以用于同时进行类型检查和构建操作，同时将特定的参数传递给构建脚本。
 
 ### 为什么不用 && 串联执行脚本？
+
 官方是这样解释的：
 
 1. 简化命令：
 
 > 使用 npm-run-all 可以通过类似 glob 的模式简化命令。对于需要运行多个相似命令的情况，这比分别使用 && 连接每个命令更为简洁。
-例如，原本需要逐个写出 npm run clean && npm run build:css && npm run build:js && npm run build:html，现在可以简化为 npm-run-all clean build:*。
+> 例如，原本需要逐个写出 npm run clean && npm run build:css && npm run build:js && npm run build:html，现在可以简化为 npm-run-all clean build:\*。
 
 2. 跨平台兼容性：
 
 > 在某些情况下，我们可能使用 & 来并行运行多个命令，但 Windows 的 cmd.exe（npm 脚本默认使用的环境）不支持 &。
 > 考虑到大约一半的 Node.js 用户在 Windows 上工作，使用 & 可能会阻碍一些用户的贡献。
-相比之下，npm-run-all --parallel（与 run-p 功能相同）在 Windows 上也能很好地工作。
-
+> 相比之下，npm-run-all --parallel（与 run-p 功能相同）在 Windows 上也能很好地工作。
 
 3. 综上所述
-> run-p（或 npm-run-all --parallel）相比于使用 && 的优势在于其能够提供更简洁的命令格式和更好的跨平台兼容性，特别是在需要并行执行多个脚本的情况下。这使得 run-p 成为在复杂项目中管理 npm 脚本的一个更有效和通用的选择。
+    > run-p（或 npm-run-all --parallel）相比于使用 && 的优势在于其能够提供更简洁的命令格式和更好的跨平台兼容性，特别是在需要并行执行多个脚本的情况下。这使得 run-p 成为在复杂项目中管理 npm 脚本的一个更有效和通用的选择。

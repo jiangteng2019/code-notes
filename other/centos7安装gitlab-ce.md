@@ -2,7 +2,7 @@
 
 1. 离线安装
 
-    ``` bash
+    ```bash
     # 下载gitlab-ce镜像:
     # https://packages.gitlab.com/gitlab/gitlab-ce
 
@@ -31,7 +31,7 @@
     yum makecache  # 这一步会创建大量的数据
 
     # 直接安装最新版
-    yum install -y gitlab-ce 
+    yum install -y gitlab-ce
 
     # 如果要安装指定的版本，在后面填上版本号即可
     yum install -y  gitlab-ce-13.6.1
@@ -42,7 +42,7 @@
 
 1. gitlab的配置
 
-    配置文件位置  /etc/gitlab/gitlab.rb
+    配置文件位置 /etc/gitlab/gitlab.rb
 
     ```sh
     [root@centos7 test]# vim /etc/gitlab/gitlab.rb
@@ -58,7 +58,7 @@
     gitlab_rails['smtp_user_name'] = "xiaohao@qq.com"  # 自己的qq邮箱账号
     gitlab_rails['smtp_password'] = "xxx"  # 开通smtp时返回的授权码
     gitlab_rails['smtp_domain'] = "qq.com"
-    gitlab_rails['smtp_authentication'] = "login"   
+    gitlab_rails['smtp_authentication'] = "login"
     gitlab_rails['smtp_enable_starttls_auto'] = true
     gitlab_rails['smtp_tls'] = false
     gitlab_rails['gitlab_email_from'] = "xiaohao@qq.com"  # 指定发送邮件的邮箱地址

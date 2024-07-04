@@ -22,20 +22,24 @@ iwr(Invoke-WebRequest)在PowerShell中用于发起HTTP/HTTPS请求来调用Web A
 
 基本语法:
 
-iwr [-Method] [-Uri] [-WebSession] [-SessionVariable] [-Certificate] [-UserAgent] 
-     [-Credential] [-UseBasicParsing] [-TimeoutSec] [-Headers] [-Body]  
-     [-OutFile] [-Proxy] [-ProxyCredential] [-ProxyUseDefaultCredentials]
+iwr [-Method] [-Uri] [-WebSession] [-SessionVariable] [-Certificate] [-UserAgent]
+[-Credential] [-UseBasicParsing] [-TimeoutSec] [-Headers] [-Body]  
+ [-OutFile] [-Proxy] [-ProxyCredential] [-ProxyUseDefaultCredentials]
 示例:
 
 powershell
 Copy code
+
 # 简单的GET请求
-     iwr -Uri https://www.example.com 
+
+     iwr -Uri https://www.example.com
 
 # POST请求
+
      iwr -Method POST -Uri https://example.com/login -Body @{username='user';password='pass'}
 
 # 下载文件
+
      iwr -Uri http://example.com/file.zip -OutFile file.zip
 
 所以iwr为PowerShell提供了很好的web请求能力,可以用来开发各种网络自动化脚本。

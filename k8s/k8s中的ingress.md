@@ -1,20 +1,5 @@
 ## k8s中的ingress
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### QA 1. 前后端分离的架构，由于跨域问题，后台使用nginx方向代理将/api开头的请求转发到java服务，应该在Nginx Ingress Controller 里配置反向代理？还是在内部的nginx里面配置方向代理？
 
 在前后端分离的架构中，由于跨域问题，通常会使用反向代理来将前端的请求转发到后端服务。对于 Kubernetes 集群中的应用，你可以选择在 Nginx Ingress Controller 或内部的 Nginx 中配置反向代理。
@@ -25,7 +10,7 @@
 
 以下是一个示例 Ingress 资源的配置，用于将所有以 `/api` 开头的请求代理到后端 Java 服务：
 
-```yaml
+````yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata在前后端分离的架构中，由于跨域问题，通常会使用反向代理来将前端的请求转发到后端服务。对于 Kubernetes 集群中的应用，你可以选择在 Nginx Ingress Controller 或内部的 Nginx 中配置反向代理。
@@ -52,7 +37,7 @@ spec:
             name: java-service
             port:
               number: 8080
-```
+````
 
 ### 2. 在内部的 Nginx 中配置反向代理
 

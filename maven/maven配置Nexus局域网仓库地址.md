@@ -1,4 +1,5 @@
 ## maven配置Nexus局域网仓库地址
+
 在局域网内使用 Nexus 搭建了 Maven 仓库，但是 IntelliJ IDEA 中的 Maven 项目无法从该仓库下载 JAR 包时，需要确保 Maven 配置文件（settings.xml）中正确配置了仓库地址。以下是配置方法：
 
 1. 找到 Maven 的配置文件（settings.xml）。这个文件通常位于 Maven 安装目录的 `conf` 文件夹下，或者在用户目录下的 `.m2` 文件夹内（例如：`C:\Users\用户名\.m2\settings.xml`）。

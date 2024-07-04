@@ -1,38 +1,39 @@
 {
-  "name": "code-notes",
-  "version": "1.0.0",
-  "description": "code notes",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1 && git add .",
-    "build": "powershell -ExecutionPolicy Bypass -File build.ps1",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jiangteng2019/code-notes.git"
-  },
-  "author": "tengjiang",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/jiangteng2019/code-notes/issues"
-  },
-  "homepage": "https://github.com/jiangteng2019/code-notes#readme",
-  "dependencies": {
-    "markdown-it": "^13.0.2"
-  },
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2"
-  },
-  "lint-staged": {
-    "*.md": ["prettier --write", "git add"]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "code-notes",
+    "version": "1.0.0",
+    "description": "code notes",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "generate": "powershell -ExecutionPolicy Bypass -File generate.ps1 && git add .",
+        "build": "powershell -ExecutionPolicy Bypass -File build.ps1",
+        "prepare": "husky install",
+        "write": "prettier --write .",
+        "check": "prettier --check .",
+        "lint": "markdownlint **/*.md --ignore node_modules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jiangteng2019/code-notes.git"
+    },
+    "author": "jiangteng",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/jiangteng2019/code-notes/issues"
+    },
+    "homepage": "https://github.com/jiangteng2019/code-notes#readme",
+    "dependencies": {
+        "markdown-it": "^13.0.2",
+        "markdownlint-cli": "^0.41.0"
+    },
+    "devDependencies": {
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.3.2"
+    },
+    "lint-staged": {
+        "*.md": [
+            "prettier --write --ignore-unknown"
+        ]
     }
-  }
 }
