@@ -215,6 +215,7 @@ A small step may lead to a thousand miles
 * [儒略历与格里历](other/儒略历与格里历.md)
 * [什么是无奇点根数](other/什么是无奇点根数.md)
 * [卫星轨道外推](other/卫星轨道外推.md)
+* [卫星频段范围](other/卫星频段范围.md)
 * [虚拟机管理程序](other/虚拟机管理程序.md)
 * [由J2000坐标系引出的问题](other/由J2000坐标系引出的问题.md)
 
