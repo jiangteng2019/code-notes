@@ -151,6 +151,7 @@ A small step may lead to a thousand miles
 * [Linux安装jdk17](linux/Linux安装jdk17.md)
 * [Linux安装的初始化网络配置](linux/Linux安装的初始化网络配置.md)
 * [Linux包管理工具apt与apt-get区别](linux/Linux包管理工具apt与apt-get区别.md)
+* [Linux的五种网络IO模型](linux/Linux的五种网络IO模型.md)
 * [Linux服务器启动步骤](linux/Linux服务器启动步骤.md)
 * [Linux服务器用户登陆配置读取](linux/Linux服务器用户登陆配置读取.md)
 * [linux配置squid代理](linux/linux配置squid代理.md)
@@ -233,6 +234,7 @@ A small step may lead to a thousand miles
 * [powershell自动生成README文件](powershell/powershell自动生成README文件.md)
 
 ### Satellite
+* [第10章-测控馈电一体化系统](satellite/第10章-测控馈电一体化系统.md)
 * [第2章-卫星工程系统](satellite/第2章-卫星工程系统.md)
 
 ### Spring
