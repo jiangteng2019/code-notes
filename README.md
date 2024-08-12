@@ -18,6 +18,7 @@ A small step may lead to a thousand miles
 * [Database](#database)
 * [Devtools](#devtools)
 * [Docker](#docker)
+* [Economy](#economy)
 * [Engineering](#engineering)
 * [Flutter](#flutter)
 * [Git](#git)
@@ -86,6 +87,9 @@ A small step may lead to a thousand miles
 * [docker中的网络连接](docker/docker中的网络连接.md)
 * [Ubuntu安装docker](docker/Ubuntu安装docker.md)
 * [使用github将镜像保存至阿里云](docker/使用github将镜像保存至阿里云.md)
+
+### Economy
+* [边际成本与边际收益](economy/边际成本与边际收益.md)
 
 ### Engineering
 * [husky规范代码提交](engineering/husky规范代码提交.md)
@@ -166,6 +170,7 @@ A small step may lead to a thousand miles
 * [LInux文件系统inode](linux/LInux文件系统inode.md)
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux与宿主机共享文件夹](linux/Linux与宿主机共享文件夹.md)
+* [Linux中Cgroup与SELinux异同](linux/Linux中Cgroup与SELinux异同.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中的cgroup](linux/Linux中的cgroup.md)
 * [Linux中的数据卷](linux/Linux中的数据卷.md)
@@ -189,6 +194,7 @@ A small step may lead to a thousand miles
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
 ### Mysql
+* [mysql命令](mysql/mysql命令.md)
 * [mysql数据库实现主从复制](mysql/mysql数据库实现主从复制.md)
 
 ### Nacos
