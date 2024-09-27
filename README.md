@@ -13,6 +13,7 @@ A small step may lead to a thousand miles
 ### Categories
 * [Algorithm](#algorithm)
 * [Api](#api)
+* [Cesium](#cesium)
 * [Chrome](#chrome)
 * [Csharp](#csharp)
 * [Database](#database)
@@ -36,6 +37,7 @@ A small step may lead to a thousand miles
 * [Maven](#maven)
 * [Mysql](#mysql)
 * [Nacos](#nacos)
+* [Nginx](#nginx)
 * [Node](#node)
 * [Npm](#npm)
 * [Orekit](#orekit)
@@ -59,6 +61,9 @@ A small step may lead to a thousand miles
 
 ### Api
 * [获取bing首页壁纸api](api/获取bing首页壁纸api.md)
+
+### Cesium
+* [使用Cesium多边形创建一个贴合地面的卫星波束](cesium/使用Cesium多边形创建一个贴合地面的卫星波束.md)
 
 ### Chrome
 * [chrome全屏api使用](chrome/chrome全屏api使用.md)
@@ -201,6 +206,9 @@ A small step may lead to a thousand miles
 * [dockerDesktop启动nacos](nacos/dockerDesktop启动nacos.md)
 * [nacos基本概念](nacos/nacos基本概念.md)
 
+### Nginx
+* [nginx的停止与启动](nginx/nginx的停止与启动.md)
+
 ### Node
 * [es6模块路径解析规则](node/es6模块路径解析规则.md)
 * [npx解析命令参数规则](node/npx解析命令参数规则.md)
@@ -229,6 +237,7 @@ A small step may lead to a thousand miles
 * [解析传播与数值传播](other/解析传播与数值传播.md)
 * [裸机虚拟化技术](other/裸机虚拟化技术.md)
 * [儒略历与格里历](other/儒略历与格里历.md)
+* [什么是VXLAN](other/什么是VXLAN.md)
 * [什么是无奇点根数](other/什么是无奇点根数.md)
 * [卫星轨道外推](other/卫星轨道外推.md)
 * [卫星频段范围](other/卫星频段范围.md)
