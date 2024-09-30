@@ -235,6 +235,7 @@ A small step may lead to a thousand miles
 * [轨道平根与瞬根](other/轨道平根与瞬根.md)
 * [回归年与恒星年](other/回归年与恒星年.md)
 * [解析传播与数值传播](other/解析传播与数值传播.md)
+* [零信任模型](other/零信任模型.md)
 * [裸机虚拟化技术](other/裸机虚拟化技术.md)
 * [儒略历与格里历](other/儒略历与格里历.md)
 * [什么是VXLAN](other/什么是VXLAN.md)
