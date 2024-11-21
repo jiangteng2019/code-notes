@@ -54,6 +54,7 @@ A small step may lead to a thousand miles
 * [Vite](#vite)
 * [Vitest](#vitest)
 * [Windows](#windows)
+* [Work](#work)
 
 ### Algorithm
 * [CRC校验实现](algorithm/CRC校验实现.md)
@@ -176,9 +177,11 @@ A small step may lead to a thousand miles
 * [Linux硬链接与符号链接](linux/Linux硬链接与符号链接.md)
 * [Linux与宿主机共享文件夹](linux/Linux与宿主机共享文件夹.md)
 * [Linux中Cgroup与SELinux异同](linux/Linux中Cgroup与SELinux异同.md)
+* [Linux中mkpart与fdisk命令在磁盘分区区别](linux/Linux中mkpart与fdisk命令在磁盘分区区别.md)
 * [Linux中service命令与systemctl命令](linux/Linux中service命令与systemctl命令.md)
 * [Linux中的cgroup](linux/Linux中的cgroup.md)
 * [Linux中的数据卷](linux/Linux中的数据卷.md)
+* [Linux中的文件挂载](linux/Linux中的文件挂载.md)
 * [Linux中线程的本质是进程](linux/Linux中线程的本质是进程.md)
 * [Linux终端操作快捷键](linux/Linux终端操作快捷键.md)
 * [ssh端口转发](linux/ssh端口转发.md)
@@ -232,6 +235,7 @@ A small step may lead to a thousand miles
 * [GPS时钟考虑相对论效应](other/GPS时钟考虑相对论效应.md)
 * [常见天文参考系与名词解释](other/常见天文参考系与名词解释.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
+* [单点登录](other/单点登录.md)
 * [轨道平根与瞬根](other/轨道平根与瞬根.md)
 * [回归年与恒星年](other/回归年与恒星年.md)
 * [解析传播与数值传播](other/解析传播与数值传播.md)
@@ -295,4 +299,8 @@ A small step may lead to a thousand miles
 * [windows编译c文件的步骤](windows/windows编译c文件的步骤.md)
 * [windows查看端口占用](windows/windows查看端口占用.md)
 * [Windows的快捷方式、符号链接、目录联接、硬链接](windows/Windows的快捷方式、符号链接、目录联接、硬链接.md)
+
+### Work
+* [centos7.9搭建kafka集群](work/centos7.9搭建kafka集群.md)
+* [Linux分区格式化挂载硬盘](work/Linux分区格式化挂载硬盘.md)
 
