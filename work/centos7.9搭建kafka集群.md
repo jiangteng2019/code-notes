@@ -21,6 +21,14 @@ yum list
 yum update
 ```
 
+## 调整时区
+```sh
+# 查看当前时间同步服务器
+chronyc sources
+# 设置时区
+timedatectl set-timezone Asia/Shanghai
+```
+
 ## 安装JDK（kafka依赖）
 
 ```sh

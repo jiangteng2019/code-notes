@@ -303,4 +303,5 @@ A small step may lead to a thousand miles
 ### Work
 * [centos7.9搭建kafka集群](work/centos7.9搭建kafka集群.md)
 * [Linux分区格式化挂载硬盘](work/Linux分区格式化挂载硬盘.md)
+* [linux环境下gitlab安装与配置](work/linux环境下gitlab安装与配置.md)
 
