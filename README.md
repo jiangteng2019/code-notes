@@ -35,6 +35,7 @@ A small step may lead to a thousand miles
 * [Markdown](#markdown)
 * [Math](#math)
 * [Maven](#maven)
+* [Minio](#minio)
 * [Mysql](#mysql)
 * [Nacos](#nacos)
 * [Nginx](#nginx)
@@ -88,6 +89,7 @@ A small step may lead to a thousand miles
 * [docker常见命令](docker/docker常见命令.md)
 * [docker镜像复制与加载](docker/docker镜像复制与加载.md)
 * [docker容器数据卷](docker/docker容器数据卷.md)
+* [docker下载镜像](docker/docker下载镜像.md)
 * [docker与Containerd的区别](docker/docker与Containerd的区别.md)
 * [docker中-p参数](docker/docker中-p参数.md)
 * [docker中的网络连接](docker/docker中的网络连接.md)
@@ -201,6 +203,9 @@ A small step may lead to a thousand miles
 * [maven配置阿里云镜像](maven/maven配置阿里云镜像.md)
 * [maven依赖管理关系](maven/maven依赖管理关系.md)
 
+### Minio
+* [容器启动minio服务](minio/容器启动minio服务.md)
+
 ### Mysql
 * [mysql命令](mysql/mysql命令.md)
 * [mysql数据库实现主从复制](mysql/mysql数据库实现主从复制.md)
@@ -265,6 +270,7 @@ A small step may lead to a thousand miles
 * [AOP编程](spring/AOP编程.md)
 * [jdbcTemplate访问数据库](spring/jdbcTemplate访问数据库.md)
 * [mybatis分页插件pagehelper实现原理](spring/mybatis分页插件pagehelper实现原理.md)
+* [springboot项目集成springSecurity](spring/springboot项目集成springSecurity.md)
 * [springboot中controller接收前端参数方法](spring/springboot中controller接收前端参数方法.md)
 * [springCloud微服务治理框架](spring/springCloud微服务治理框架.md)
 * [spring的@Autowired与@Resource注解区别](spring/spring的@Autowired与@Resource注解区别.md)
