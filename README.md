@@ -41,6 +41,7 @@ A small step may lead to a thousand miles
 * [Nginx](#nginx)
 * [Node](#node)
 * [Npm](#npm)
+* [Operationsystem](#operationsystem)
 * [Orekit](#orekit)
 * [Orm](#orm)
 * [Other](#other)
@@ -110,6 +111,7 @@ A small step may lead to a thousand miles
 ### Git
 * [git错误解决](git/git错误解决.md)
 * [git删除分支](git/git删除分支.md)
+* [git输入错误的凭证导致再次push被拒绝](git/git输入错误的凭证导致再次push被拒绝.md)
 * [git显示文件有更改打开后并无内容修改](git/git显示文件有更改打开后并无内容修改.md)
 * [git移除已经追踪的文件](git/git移除已经追踪的文件.md)
 * [git重置命令参数](git/git重置命令参数.md)
@@ -142,6 +144,8 @@ A small step may lead to a thousand miles
 * [java中的Servlet](java/java中的Servlet.md)
 * [java中的对象类型](java/java中的对象类型.md)
 * [java中的锁](java/java中的锁.md)
+* [java中的锁的机制实现](java/java中的锁的机制实现.md)
+* [java中的线程sleep时间精度](java/java中的线程sleep时间精度.md)
 * [java中子类继承父类静态变量](java/java中子类继承父类静态变量.md)
 * [运行在jvm上的语言](java/运行在jvm上的语言.md)
 
@@ -189,6 +193,7 @@ A small step may lead to a thousand miles
 * [ssh端口转发](linux/ssh端口转发.md)
 * [yum安装包提示BDB0113错误](linux/yum安装包提示BDB0113错误.md)
 * [yum源配置与解释](linux/yum源配置与解释.md)
+* [内存屏障与用户态内核态切换](linux/内存屏障与用户态内核态切换.md)
 
 ### Markdown
 * [markdown基本语法](markdown/markdown基本语法.md)
@@ -229,6 +234,9 @@ A small step may lead to a thousand miles
 * [npm使用run-p运行多个命令](npm/npm使用run-p运行多个命令.md)
 * [npm中以@开头的包名解释](npm/npm中以@开头的包名解释.md)
 
+### Operationsystem
+* [内核态与用户态](operationsystem/内核态与用户态.md)
+
 ### Orekit
 
 ### Orm
@@ -255,6 +263,7 @@ A small step may lead to a thousand miles
 * [由J2000坐标系引出的问题](other/由J2000坐标系引出的问题.md)
 
 ### Powershell
+* [cmd命令管理多nginx进程](powershell/cmd命令管理多nginx进程.md)
 * [cmd命令删除过深文件夹路径](powershell/cmd命令删除过深文件夹路径.md)
 * [cmd命令提示符支持中文](powershell/cmd命令提示符支持中文.md)
 * [powershell运行策略](powershell/powershell运行策略.md)
