@@ -49,8 +49,10 @@ A small step may lead to a thousand miles
 * [Satellite](#satellite)
 * [Spring](#spring)
 * [Ssh](#ssh)
+* [Sso](#sso)
 * [Tcpip](#tcpip)
 * [Teststand](#teststand)
+* [Think](#think)
 * [Tomcat](#tomcat)
 * [Typescript](#typescript)
 * [Vite](#vite)
@@ -238,6 +240,7 @@ A small step may lead to a thousand miles
 * [内核态与用户态](operationsystem/内核态与用户态.md)
 
 ### Orekit
+* [轨道的平根与瞬根](orekit/轨道的平根与瞬根.md)
 
 ### Orm
 * [mybatis通过注解生成条件查询sql](orm/mybatis通过注解生成条件查询sql.md)
@@ -246,9 +249,12 @@ A small step may lead to a thousand miles
 * [centos7安装gitlab-ce](other/centos7安装gitlab-ce.md)
 * [EME2000坐标系GCRS坐标系与J2000坐标系](other/EME2000坐标系GCRS坐标系与J2000坐标系.md)
 * [GPS时钟考虑相对论效应](other/GPS时钟考虑相对论效应.md)
+* [J2000参考系定义](other/J2000参考系定义.md)
+* [J2000纪元时间](other/J2000纪元时间.md)
 * [常见天文参考系与名词解释](other/常见天文参考系与名词解释.md)
 * [常用的坐标系与名词解释](other/常用的坐标系与名词解释.md)
 * [单点登录](other/单点登录.md)
+* [地球时TT与国际原子时TAI差值计算](other/地球时TT与国际原子时TAI差值计算.md)
 * [轨道平根与瞬根](other/轨道平根与瞬根.md)
 * [回归年与恒星年](other/回归年与恒星年.md)
 * [解析传播与数值传播](other/解析传播与数值传播.md)
@@ -286,6 +292,9 @@ A small step may lead to a thousand miles
 
 ### Ssh
 
+### Sso
+* [SSO的两种主流架构范式](sso/SSO的两种主流架构范式.md)
+
 ### Tcpip
 * [ARP地址解析协议](tcpip/ARP地址解析协议.md)
 * [NTP网络时间协议](tcpip/NTP网络时间协议.md)
@@ -293,6 +302,9 @@ A small step may lead to a thousand miles
 ### Teststand
 * [Teststand基本概念](teststand/Teststand基本概念.md)
 * [自动化测试的出现](teststand/自动化测试的出现.md)
+
+### Think
+* [一切事件的发生都需要触发器](think/一切事件的发生都需要触发器.md)
 
 ### Tomcat
 * [tomcat多线程与servlet之间调用](tomcat/tomcat多线程与servlet之间调用.md)
